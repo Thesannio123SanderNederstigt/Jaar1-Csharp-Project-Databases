@@ -1,0 +1,49 @@
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenUI.exe.config
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenUI.exe
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenUI.pdb
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\obj\Debug\SomerenUI.csprojResolveAssemblyReference.cache
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\obj\Debug\SomerenUI.Properties.Resources.resources
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.Cache
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\obj\Debug\SomerenUI.exe
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\obj\Debug\SomerenUI.pdb
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\obj\Debug\SomerenUI.SomerenUI.resources
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenDAL.dll
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenLogic.dll
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenModel.dll
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenDAL.pdb
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenLogic.pdb
+C:\Users\Thijs Otter\Desktop\INholland\Project Databases\2018-2019\Someren1819\SomerenUI\bin\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csprojAssemblyReference.cache
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.exe
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.pdb
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenUI.exe.config
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenUI.exe
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenUI.pdb
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.dll
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenLogic.dll
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenModel.dll
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.pdb
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.dll.config
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenLogic.pdb
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\bin\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.SomerenUI.resources
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.Properties.Resources.resources
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.cache
+S:\Inholland\Project Databases\Someren opdracht (Visual Studio)\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenUI.exe.config
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenUI.exe
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenUI.pdb
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.dll
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenLogic.dll
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenModel.dll
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.pdb
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.dll.config
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenLogic.pdb
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\bin\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csprojAssemblyReference.cache
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.SomerenUI.resources
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.Properties.Resources.resources
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.cache
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.exe
+S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.pdb
