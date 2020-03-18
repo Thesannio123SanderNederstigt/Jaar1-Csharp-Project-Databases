@@ -60,5 +60,12 @@ namespace SomerenDAL
             int modified = sqlParameters.GetLength(0);
             return modified;
         }
+
+        public List<Bestelling> GetRangeOfOrders(DateTime startDate, DateTime endDate)
+        {
+            string query = "SELECT Bestellingsnummer, datum, totaalbedrag, Dranknummer, Studentnummer FROM Bestelling WHERE datum >= @start AND datum <= @end";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@start", startDate), new SqlParameter("@end", endDate) };
+            return ReadOrderTables(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }

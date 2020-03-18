@@ -40,6 +40,8 @@
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DrankvoorraadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OmzetrapportageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
             this.pnl_Students = new System.Windows.Forms.Panel();
@@ -54,35 +56,46 @@
             this.label1 = new System.Windows.Forms.Label();
             this.listViewLecturers = new System.Windows.Forms.ListView();
             this.pnl_Rooms = new System.Windows.Forms.Panel();
+            this.ListRoomBox = new System.Windows.Forms.ListBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_Rooms = new System.Windows.Forms.Label();
             this.pnl_Drank = new System.Windows.Forms.Panel();
             this.lv_Drank = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lbl_Drank = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.ListRoomBox = new System.Windows.Forms.ListBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbl_Rooms = new System.Windows.Forms.Label();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.KassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OmzetrapportageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Kassa = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lbl_Kassa = new System.Windows.Forms.Label();
-            this.lblStudents = new System.Windows.Forms.Label();
-            this.cmb_Students = new System.Windows.Forms.ComboBox();
-            this.lbl_Drinks = new System.Windows.Forms.Label();
-            this.cmb_Drinks = new System.Windows.Forms.ComboBox();
-            this.OrderBtn = new System.Windows.Forms.Button();
+            this.dranktestlabel = new System.Windows.Forms.Label();
+            this.studenttestlabel = new System.Windows.Forms.Label();
+            this.lbl_Bestellingen = new System.Windows.Forms.Label();
             this.lv_Bestelling = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lbl_Bestellingen = new System.Windows.Forms.Label();
-            this.studenttestlabel = new System.Windows.Forms.Label();
-            this.dranktestlabel = new System.Windows.Forms.Label();
+            this.OrderBtn = new System.Windows.Forms.Button();
+            this.cmb_Drinks = new System.Windows.Forms.ComboBox();
+            this.lbl_Drinks = new System.Windows.Forms.Label();
+            this.cmb_Students = new System.Windows.Forms.ComboBox();
+            this.lblStudents = new System.Windows.Forms.Label();
+            this.lbl_Kassa = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pnl_Omzetrapportage = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lbl_Omzetrapportage = new System.Windows.Forms.Label();
+            this.lbl_Startdatum = new System.Windows.Forms.Label();
+            this.lbl_Einddatum = new System.Windows.Forms.Label();
+            this.StartCalendar = new System.Windows.Forms.MonthCalendar();
+            this.EindCalendar = new System.Windows.Forms.MonthCalendar();
+            this.lv_Omzet = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblError = new System.Windows.Forms.Label();
+            this.OmzetBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
@@ -91,11 +104,13 @@
             this.pnl_Lecturers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_Rooms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_Drank.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_Kassa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pnl_Omzetrapportage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // img_Dashboard
@@ -187,6 +202,20 @@
             this.DrankvoorraadToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.DrankvoorraadToolStripMenuItem.Text = "Drankvoorraad";
             this.DrankvoorraadToolStripMenuItem.Click += new System.EventHandler(this.DrankvoorraadToolStripMenuItem_Click);
+            // 
+            // KassaToolStripMenuItem
+            // 
+            this.KassaToolStripMenuItem.Name = "KassaToolStripMenuItem";
+            this.KassaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.KassaToolStripMenuItem.Text = "Kassa";
+            this.KassaToolStripMenuItem.Click += new System.EventHandler(this.KassaToolStripMenuItem_Click);
+            // 
+            // OmzetrapportageToolStripMenuItem
+            // 
+            this.OmzetrapportageToolStripMenuItem.Name = "OmzetrapportageToolStripMenuItem";
+            this.OmzetrapportageToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.OmzetrapportageToolStripMenuItem.Text = "Omzetrapportage";
+            this.OmzetrapportageToolStripMenuItem.Click += new System.EventHandler(this.OmzetrapportageToolStripMenuItem_Click);
             // 
             // pnl_Dashboard
             // 
@@ -310,6 +339,36 @@
             this.pnl_Rooms.Size = new System.Drawing.Size(938, 472);
             this.pnl_Rooms.TabIndex = 6;
             // 
+            // ListRoomBox
+            // 
+            this.ListRoomBox.FormattingEnabled = true;
+            this.ListRoomBox.Items.AddRange(new object[] {
+            " "});
+            this.ListRoomBox.Location = new System.Drawing.Point(26, 60);
+            this.ListRoomBox.Name = "ListRoomBox";
+            this.ListRoomBox.Size = new System.Drawing.Size(506, 251);
+            this.ListRoomBox.TabIndex = 9;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(808, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbl_Rooms
+            // 
+            this.lbl_Rooms.AutoSize = true;
+            this.lbl_Rooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Rooms.Location = new System.Drawing.Point(21, 23);
+            this.lbl_Rooms.Name = "lbl_Rooms";
+            this.lbl_Rooms.Size = new System.Drawing.Size(90, 29);
+            this.lbl_Rooms.TabIndex = 5;
+            this.lbl_Rooms.Text = "Rooms";
+            // 
             // pnl_Drank
             // 
             this.pnl_Drank.Controls.Add(this.lv_Drank);
@@ -350,6 +409,11 @@
             this.columnHeader3.Text = "Verkoopprijs";
             this.columnHeader3.Width = 150;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "voorraad indicatie";
+            this.columnHeader4.Width = 200;
+            // 
             // lbl_Drank
             // 
             this.lbl_Drank.AutoSize = true;
@@ -370,55 +434,6 @@
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
-            // ListRoomBox
-            // 
-            this.ListRoomBox.FormattingEnabled = true;
-            this.ListRoomBox.Items.AddRange(new object[] {
-            " "});
-            this.ListRoomBox.Location = new System.Drawing.Point(26, 60);
-            this.ListRoomBox.Name = "ListRoomBox";
-            this.ListRoomBox.Size = new System.Drawing.Size(506, 251);
-            this.ListRoomBox.TabIndex = 9;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SomerenUI.Properties.Resources.someren;
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(808, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(130, 123);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lbl_Rooms
-            // 
-            this.lbl_Rooms.AutoSize = true;
-            this.lbl_Rooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Rooms.Location = new System.Drawing.Point(21, 23);
-            this.lbl_Rooms.Name = "lbl_Rooms";
-            this.lbl_Rooms.Size = new System.Drawing.Size(90, 29);
-            this.lbl_Rooms.TabIndex = 5;
-            this.lbl_Rooms.Text = "Rooms";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "voorraad indicatie";
-            this.columnHeader4.Width = 200;
-            // 
-            // KassaToolStripMenuItem
-            // 
-            this.KassaToolStripMenuItem.Name = "KassaToolStripMenuItem";
-            this.KassaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.KassaToolStripMenuItem.Text = "Kassa";
-            this.KassaToolStripMenuItem.Click += new System.EventHandler(this.KassaToolStripMenuItem_Click);
-            // 
-            // OmzetrapportageToolStripMenuItem
-            // 
-            this.OmzetrapportageToolStripMenuItem.Name = "OmzetrapportageToolStripMenuItem";
-            this.OmzetrapportageToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
-            this.OmzetrapportageToolStripMenuItem.Text = "Omzetrapportage";
-            this.OmzetrapportageToolStripMenuItem.Click += new System.EventHandler(this.OmzetrapportageToolStripMenuItem_Click);
-            // 
             // pnl_Kassa
             // 
             this.pnl_Kassa.Controls.Add(this.dranktestlabel);
@@ -437,71 +452,33 @@
             this.pnl_Kassa.Size = new System.Drawing.Size(940, 472);
             this.pnl_Kassa.TabIndex = 8;
             // 
-            // pictureBox5
+            // dranktestlabel
             // 
-            this.pictureBox5.Image = global::SomerenUI.Properties.Resources.someren;
-            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(810, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(130, 123);
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
+            this.dranktestlabel.AutoSize = true;
+            this.dranktestlabel.Location = new System.Drawing.Point(338, 180);
+            this.dranktestlabel.Name = "dranktestlabel";
+            this.dranktestlabel.Size = new System.Drawing.Size(73, 13);
+            this.dranktestlabel.TabIndex = 19;
+            this.dranktestlabel.Text = "Dranknummer";
             // 
-            // lbl_Kassa
+            // studenttestlabel
             // 
-            this.lbl_Kassa.AutoSize = true;
-            this.lbl_Kassa.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Kassa.Location = new System.Drawing.Point(23, 28);
-            this.lbl_Kassa.Name = "lbl_Kassa";
-            this.lbl_Kassa.Size = new System.Drawing.Size(240, 29);
-            this.lbl_Kassa.TabIndex = 10;
-            this.lbl_Kassa.Text = "Kassa bestelsysteem";
+            this.studenttestlabel.AutoSize = true;
+            this.studenttestlabel.Location = new System.Drawing.Point(60, 180);
+            this.studenttestlabel.Name = "studenttestlabel";
+            this.studenttestlabel.Size = new System.Drawing.Size(81, 13);
+            this.studenttestlabel.TabIndex = 18;
+            this.studenttestlabel.Text = "Studentnummer";
             // 
-            // lblStudents
+            // lbl_Bestellingen
             // 
-            this.lblStudents.AutoSize = true;
-            this.lblStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudents.Location = new System.Drawing.Point(26, 98);
-            this.lblStudents.Name = "lblStudents";
-            this.lblStudents.Size = new System.Drawing.Size(158, 25);
-            this.lblStudents.TabIndex = 11;
-            this.lblStudents.Text = "Select a student:";
-            // 
-            // cmb_Students
-            // 
-            this.cmb_Students.FormattingEnabled = true;
-            this.cmb_Students.Location = new System.Drawing.Point(33, 141);
-            this.cmb_Students.Name = "cmb_Students";
-            this.cmb_Students.Size = new System.Drawing.Size(151, 21);
-            this.cmb_Students.TabIndex = 12;
-            // 
-            // lbl_Drinks
-            // 
-            this.lbl_Drinks.AutoSize = true;
-            this.lbl_Drinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Drinks.Location = new System.Drawing.Point(294, 98);
-            this.lbl_Drinks.Name = "lbl_Drinks";
-            this.lbl_Drinks.Size = new System.Drawing.Size(136, 25);
-            this.lbl_Drinks.TabIndex = 13;
-            this.lbl_Drinks.Text = "Select a drink:";
-            // 
-            // cmb_Drinks
-            // 
-            this.cmb_Drinks.FormattingEnabled = true;
-            this.cmb_Drinks.Location = new System.Drawing.Point(299, 141);
-            this.cmb_Drinks.Name = "cmb_Drinks";
-            this.cmb_Drinks.Size = new System.Drawing.Size(151, 21);
-            this.cmb_Drinks.TabIndex = 14;
-            // 
-            // OrderBtn
-            // 
-            this.OrderBtn.Location = new System.Drawing.Point(190, 205);
-            this.OrderBtn.Name = "OrderBtn";
-            this.OrderBtn.Size = new System.Drawing.Size(95, 23);
-            this.OrderBtn.TabIndex = 15;
-            this.OrderBtn.Text = "Afrekenen";
-            this.OrderBtn.UseVisualStyleBackColor = true;
-            this.OrderBtn.Click += new System.EventHandler(this.OrderBtn_Click);
+            this.lbl_Bestellingen.AutoSize = true;
+            this.lbl_Bestellingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestellingen.Location = new System.Drawing.Point(28, 262);
+            this.lbl_Bestellingen.Name = "lbl_Bestellingen";
+            this.lbl_Bestellingen.Size = new System.Drawing.Size(128, 25);
+            this.lbl_Bestellingen.TabIndex = 17;
+            this.lbl_Bestellingen.Text = "Drink Orders:";
             // 
             // lv_Bestelling
             // 
@@ -538,39 +515,195 @@
             this.columnHeader8.Text = "Studentnaam";
             this.columnHeader8.Width = 150;
             // 
-            // lbl_Bestellingen
+            // OrderBtn
             // 
-            this.lbl_Bestellingen.AutoSize = true;
-            this.lbl_Bestellingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestellingen.Location = new System.Drawing.Point(28, 262);
-            this.lbl_Bestellingen.Name = "lbl_Bestellingen";
-            this.lbl_Bestellingen.Size = new System.Drawing.Size(128, 25);
-            this.lbl_Bestellingen.TabIndex = 17;
-            this.lbl_Bestellingen.Text = "Drink Orders:";
+            this.OrderBtn.Location = new System.Drawing.Point(190, 205);
+            this.OrderBtn.Name = "OrderBtn";
+            this.OrderBtn.Size = new System.Drawing.Size(95, 23);
+            this.OrderBtn.TabIndex = 15;
+            this.OrderBtn.Text = "Afrekenen";
+            this.OrderBtn.UseVisualStyleBackColor = true;
+            this.OrderBtn.Click += new System.EventHandler(this.OrderBtn_Click);
             // 
-            // studenttestlabel
+            // cmb_Drinks
             // 
-            this.studenttestlabel.AutoSize = true;
-            this.studenttestlabel.Location = new System.Drawing.Point(60, 180);
-            this.studenttestlabel.Name = "studenttestlabel";
-            this.studenttestlabel.Size = new System.Drawing.Size(81, 13);
-            this.studenttestlabel.TabIndex = 18;
-            this.studenttestlabel.Text = "Studentnummer";
+            this.cmb_Drinks.FormattingEnabled = true;
+            this.cmb_Drinks.Location = new System.Drawing.Point(299, 141);
+            this.cmb_Drinks.Name = "cmb_Drinks";
+            this.cmb_Drinks.Size = new System.Drawing.Size(151, 21);
+            this.cmb_Drinks.TabIndex = 14;
             // 
-            // dranktestlabel
+            // lbl_Drinks
             // 
-            this.dranktestlabel.AutoSize = true;
-            this.dranktestlabel.Location = new System.Drawing.Point(338, 180);
-            this.dranktestlabel.Name = "dranktestlabel";
-            this.dranktestlabel.Size = new System.Drawing.Size(73, 13);
-            this.dranktestlabel.TabIndex = 19;
-            this.dranktestlabel.Text = "Dranknummer";
+            this.lbl_Drinks.AutoSize = true;
+            this.lbl_Drinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Drinks.Location = new System.Drawing.Point(294, 98);
+            this.lbl_Drinks.Name = "lbl_Drinks";
+            this.lbl_Drinks.Size = new System.Drawing.Size(136, 25);
+            this.lbl_Drinks.TabIndex = 13;
+            this.lbl_Drinks.Text = "Select a drink:";
+            // 
+            // cmb_Students
+            // 
+            this.cmb_Students.FormattingEnabled = true;
+            this.cmb_Students.Location = new System.Drawing.Point(33, 141);
+            this.cmb_Students.Name = "cmb_Students";
+            this.cmb_Students.Size = new System.Drawing.Size(151, 21);
+            this.cmb_Students.TabIndex = 12;
+            // 
+            // lblStudents
+            // 
+            this.lblStudents.AutoSize = true;
+            this.lblStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudents.Location = new System.Drawing.Point(26, 98);
+            this.lblStudents.Name = "lblStudents";
+            this.lblStudents.Size = new System.Drawing.Size(158, 25);
+            this.lblStudents.TabIndex = 11;
+            this.lblStudents.Text = "Select a student:";
+            // 
+            // lbl_Kassa
+            // 
+            this.lbl_Kassa.AutoSize = true;
+            this.lbl_Kassa.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Kassa.Location = new System.Drawing.Point(23, 28);
+            this.lbl_Kassa.Name = "lbl_Kassa";
+            this.lbl_Kassa.Size = new System.Drawing.Size(240, 29);
+            this.lbl_Kassa.TabIndex = 10;
+            this.lbl_Kassa.Text = "Kassa bestelsysteem";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(810, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pnl_Omzetrapportage
+            // 
+            this.pnl_Omzetrapportage.Controls.Add(this.OmzetBtn);
+            this.pnl_Omzetrapportage.Controls.Add(this.lblError);
+            this.pnl_Omzetrapportage.Controls.Add(this.lv_Omzet);
+            this.pnl_Omzetrapportage.Controls.Add(this.EindCalendar);
+            this.pnl_Omzetrapportage.Controls.Add(this.StartCalendar);
+            this.pnl_Omzetrapportage.Controls.Add(this.lbl_Einddatum);
+            this.pnl_Omzetrapportage.Controls.Add(this.lbl_Startdatum);
+            this.pnl_Omzetrapportage.Controls.Add(this.lbl_Omzetrapportage);
+            this.pnl_Omzetrapportage.Controls.Add(this.pictureBox6);
+            this.pnl_Omzetrapportage.Location = new System.Drawing.Point(10, 21);
+            this.pnl_Omzetrapportage.Name = "pnl_Omzetrapportage";
+            this.pnl_Omzetrapportage.Size = new System.Drawing.Size(940, 472);
+            this.pnl_Omzetrapportage.TabIndex = 9;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
+            this.pictureBox6.Location = new System.Drawing.Point(810, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // lbl_Omzetrapportage
+            // 
+            this.lbl_Omzetrapportage.AutoSize = true;
+            this.lbl_Omzetrapportage.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Omzetrapportage.Location = new System.Drawing.Point(13, 23);
+            this.lbl_Omzetrapportage.Name = "lbl_Omzetrapportage";
+            this.lbl_Omzetrapportage.Size = new System.Drawing.Size(201, 29);
+            this.lbl_Omzetrapportage.TabIndex = 11;
+            this.lbl_Omzetrapportage.Text = "Omzetrapportage";
+            // 
+            // lbl_Startdatum
+            // 
+            this.lbl_Startdatum.AutoSize = true;
+            this.lbl_Startdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Startdatum.Location = new System.Drawing.Point(23, 79);
+            this.lbl_Startdatum.Name = "lbl_Startdatum";
+            this.lbl_Startdatum.Size = new System.Drawing.Size(197, 25);
+            this.lbl_Startdatum.TabIndex = 12;
+            this.lbl_Startdatum.Text = "Selecteer startdatum:";
+            // 
+            // lbl_Einddatum
+            // 
+            this.lbl_Einddatum.AutoSize = true;
+            this.lbl_Einddatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Einddatum.Location = new System.Drawing.Point(264, 79);
+            this.lbl_Einddatum.Name = "lbl_Einddatum";
+            this.lbl_Einddatum.Size = new System.Drawing.Size(197, 25);
+            this.lbl_Einddatum.TabIndex = 13;
+            this.lbl_Einddatum.Text = "Selecteer einddatum:";
+            // 
+            // StartCalendar
+            // 
+            this.StartCalendar.Location = new System.Drawing.Point(33, 115);
+            this.StartCalendar.Name = "StartCalendar";
+            this.StartCalendar.TabIndex = 14;
+            // 
+            // EindCalendar
+            // 
+            this.EindCalendar.Location = new System.Drawing.Point(275, 115);
+            this.EindCalendar.Name = "EindCalendar";
+            this.EindCalendar.TabIndex = 15;
+            // 
+            // lv_Omzet
+            // 
+            this.lv_Omzet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.lv_Omzet.HideSelection = false;
+            this.lv_Omzet.Location = new System.Drawing.Point(465, 301);
+            this.lv_Omzet.Name = "lv_Omzet";
+            this.lv_Omzet.Size = new System.Drawing.Size(436, 135);
+            this.lv_Omzet.TabIndex = 17;
+            this.lv_Omzet.UseCompatibleStateImageBehavior = false;
+            this.lv_Omzet.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Afzet";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Omzet";
+            this.columnHeader10.Width = 180;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Aantal klanten";
+            this.columnHeader11.Width = 150;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Location = new System.Drawing.Point(168, 355);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(12, 17);
+            this.lblError.TabIndex = 18;
+            this.lblError.Text = " ";
+            // 
+            // OmzetBtn
+            // 
+            this.OmzetBtn.Location = new System.Drawing.Point(618, 221);
+            this.OmzetBtn.Name = "OmzetBtn";
+            this.OmzetBtn.Size = new System.Drawing.Size(108, 23);
+            this.OmzetBtn.TabIndex = 19;
+            this.OmzetBtn.Text = "Bereken Omzet";
+            this.OmzetBtn.UseVisualStyleBackColor = true;
+            this.OmzetBtn.Click += new System.EventHandler(this.OmzetBtn_Click);
             // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 505);
+            this.Controls.Add(this.pnl_Omzetrapportage);
             this.Controls.Add(this.pnl_Kassa);
             this.Controls.Add(this.pnl_Drank);
             this.Controls.Add(this.pnl_Rooms);
@@ -597,13 +730,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_Rooms.ResumeLayout(false);
             this.pnl_Rooms.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_Drank.ResumeLayout(false);
             this.pnl_Drank.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_Kassa.ResumeLayout(false);
             this.pnl_Kassa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.pnl_Omzetrapportage.ResumeLayout(false);
+            this.pnl_Omzetrapportage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,6 +801,19 @@
         private System.Windows.Forms.Label lbl_Bestellingen;
         private System.Windows.Forms.Label dranktestlabel;
         private System.Windows.Forms.Label studenttestlabel;
+        private System.Windows.Forms.Panel pnl_Omzetrapportage;
+        private System.Windows.Forms.Label lbl_Omzetrapportage;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lbl_Einddatum;
+        private System.Windows.Forms.Label lbl_Startdatum;
+        private System.Windows.Forms.MonthCalendar EindCalendar;
+        private System.Windows.Forms.MonthCalendar StartCalendar;
+        private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.ListView lv_Omzet;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Button OmzetBtn;
     }
 }
 

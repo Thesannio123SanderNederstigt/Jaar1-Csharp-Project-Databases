@@ -38,3 +38,14 @@ S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en on
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.dll
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenLogic.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenLogic.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenDAL.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenModel.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenDAL.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenDAL.dll.config
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\bin\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.csprojAssemblyReference.cache
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.csproj.CopyComplete
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenLogic\obj\Debug\SomerenLogic.pdb

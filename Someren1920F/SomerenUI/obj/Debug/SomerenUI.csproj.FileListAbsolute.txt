@@ -47,3 +47,20 @@ S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en on
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.exe
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenUI\obj\Debug\SomerenUI.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenUI.exe.config
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenUI.exe
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenUI.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenLogic.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenModel.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenDAL.dll.config
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenLogic.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\bin\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csprojAssemblyReference.cache
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.SomerenUI.resources
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.Properties.Resources.resources
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.GenerateResource.cache
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.csproj.CopyComplete
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.exe
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenUI\obj\Debug\SomerenUI.pdb

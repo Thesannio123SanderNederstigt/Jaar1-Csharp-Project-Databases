@@ -37,6 +37,7 @@ namespace SomerenUI
                 pnl_Rooms.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -51,6 +52,7 @@ namespace SomerenUI
                 pnl_Rooms.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 // show students
                 pnl_Students.Show();
@@ -80,6 +82,7 @@ namespace SomerenUI
                 pnl_Rooms.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 pnl_Lecturers.Show();
 
@@ -102,6 +105,7 @@ namespace SomerenUI
                 pnl_Lecturers.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 pnl_Rooms.Show();
 
@@ -126,6 +130,7 @@ namespace SomerenUI
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
                 pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 //show the Drinks panel
                 pnl_Drank.Show();
@@ -156,6 +161,7 @@ namespace SomerenUI
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
                 pnl_Drank.Hide();
+                pnl_Omzetrapportage.Hide();
 
                 //show the Kassa panel
                 pnl_Kassa.Show();
@@ -191,6 +197,19 @@ namespace SomerenUI
             }
             else if (panelName == "Omzetrapportage")
             {
+                //Hide all the other panels
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+                pnl_Students.Hide();
+                pnl_Lecturers.Hide();
+                pnl_Rooms.Hide();
+                pnl_Drank.Hide();
+                pnl_Kassa.Hide();
+
+                //show this panel
+                pnl_Omzetrapportage.Show();
+
+               
 
             }
         }
@@ -267,7 +286,7 @@ namespace SomerenUI
             dranktestlabel.Text = drankNummer.ToString(); //debugging test label voor dranken
 
             
-            //hier straks code voor het aanmaken van een Bestelling_Kassa_Service en DAO en het dus doen van een bestelling (totaalbedrag = de prijs van een drank in deze bestelling tabel)
+
             Bestelling_Kassa_Service bestellingService = new Bestelling_Kassa_Service();
 
 
@@ -315,7 +334,70 @@ namespace SomerenUI
             //attempt 1 to reset the screen
             ShowPanel("Kassa");
 
-            
+        }
+
+        private void OmzetBtn_Click(object sender, EventArgs e)
+        {
+            lv_Omzet.Items.Clear();
+
+            Bestelling_Kassa_Service bestellingService = new Bestelling_Kassa_Service();
+
+            Drank_Service dService = new Drank_Service();
+
+            Student_Service sService = new Student_Service();
+
+            StartCalendar.MaxSelectionCount = 1;
+            EindCalendar.MaxSelectionCount = 1;
+
+            DateTime startDate = StartCalendar.SelectionRange.Start; //hier stond eerst StartCalendar.SelectionStart;
+
+            DateTime endDate = EindCalendar.SelectionRange.Start;
+
+            if (!bestellingService.ValidDateRangeCheck(startDate, endDate))
+            {
+                lblError.Text = "Er is een ongeldige tijdsperiode opgegeven!";
+            }
+            else if (bestellingService.ValidDateRangeCheck(startDate, endDate))
+            {
+                List<Bestelling> bestellingsList = bestellingService.GetRangedOrders(startDate, endDate);
+
+                int aantaldranken = 0;
+
+                int aantalstudenten = 0;
+
+                decimal omzet = 0;
+
+                foreach (Bestelling b in bestellingsList)
+                {
+
+                    Student student = sService.GetStudentById(b.Studentnummer);
+
+                    if (student != null)
+                    {
+                        aantalstudenten++;
+                    }
+
+                    Drank drank = dService.GetDrankById(b.Dranknummer);
+
+                    if (drank != null)
+                    {
+                        aantaldranken++;
+                    }
+
+                    decimal drankPrijs = drank.Price;
+
+                    omzet += drankPrijs;
+                }
+
+                //decimal Omzettotaal = (aantaldranken * omzet);
+
+                ListViewItem Omzet = new ListViewItem(aantaldranken.ToString());
+                Omzet.SubItems.Add(omzet.ToString());
+                Omzet.SubItems.Add(aantalstudenten.ToString());
+                lv_Omzet.Items.Add(Omzet);
+
+            }
+            ShowPanel("Omzetrapportage");
         }
     }
 }

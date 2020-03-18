@@ -56,5 +56,36 @@ namespace SomerenLogic
                 return unaltered;
             }
         }
+
+        public bool ValidDateRangeCheck(DateTime startDate, DateTime endDate)
+        {
+            if (endDate < startDate || startDate > DateTime.Now || endDate > DateTime.Now)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public List<Bestelling> GetRangedOrders(DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                return bestelling_db.GetRangeOfOrders(startDate, endDate);
+            }
+            catch (Exception)
+            {
+                List<Bestelling> fakeorderlist2 = new List<Bestelling>();
+
+                Bestelling neporder2 = new Bestelling(1, DateTime.Now, 2, 1, 1);
+
+                fakeorderlist2.Add(neporder2);
+
+                return fakeorderlist2;
+
+            }
+        }
     }
 }
