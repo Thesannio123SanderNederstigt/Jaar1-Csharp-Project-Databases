@@ -35,6 +35,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
@@ -50,6 +51,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
@@ -80,6 +82,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Students.Hide();
                 pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
@@ -103,6 +106,7 @@ namespace SomerenUI
                 img_Dashboard.Hide();
                 pnl_Students.Hide();
                 pnl_Lecturers.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
@@ -121,6 +125,40 @@ namespace SomerenUI
 
 
             }
+            else if (panelName == "Activities")
+            {
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+                pnl_Students.Hide();
+                pnl_Lecturers.Hide();
+                pnl_Rooms.Hide();
+                pnl_Drank.Hide();
+                pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
+
+                pnl_Activiteitenlijst.Show();
+
+                Activity_Service activityService = new Activity_Service();
+                List<Activity> activityList = activityService.GetActivities();
+
+                lv_Activiteitenlijst.Items.Clear();
+                cmb_Activiteiten.Items.Clear();
+
+                foreach (Activity a in activityList)
+                {
+                    ListViewItem li = new ListViewItem(a.Number.ToString());
+                    li.SubItems.Add(a.Description.ToString());
+                    li.SubItems.Add(a.StartTime.ToString());
+                    li.SubItems.Add(a.NumberofStudents.ToString());
+                    li.SubItems.Add(a.NumberofLecturers.ToString());
+                    lv_Activiteitenlijst.Items.Add(li);
+
+                    cmb_Activiteiten.Items.Add(a.ActiviteitcmbBoxToString());
+                }
+
+                cmb_Activiteiten.SelectedIndex = 0;
+
+            }
             else if (panelName == "Drank")
             {
                 //Hide all other panels (once again)
@@ -129,6 +167,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
 
@@ -160,6 +199,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Omzetrapportage.Hide();
 
@@ -194,6 +234,31 @@ namespace SomerenUI
                 //eerste drank selecteren als standaard.
                 cmb_Drinks.SelectedIndex = 0;
 
+
+                Bestelling_Kassa_Service bestellingService = new Bestelling_Kassa_Service();
+                List<Bestelling> orderList = bestellingService.GetOrders();
+
+                //hier de listview van de bestellingen leegmaken om daarna weer te kunnen vullen
+                lv_Bestelling.Items.Clear();
+
+                foreach (Bestelling b in orderList)
+                {
+                    //drankService.StockCheck(d);
+
+                    ListViewItem Order = new ListViewItem(b.Bestellingsnummer.ToString());
+                    Order.SubItems.Add(b.Datum.ToString());
+
+                    Drank Ordereddrank = drinksService.GetDrankById(b.Dranknummer);
+
+                    Order.SubItems.Add(Ordereddrank.DrankName.ToString());
+
+                    Student OrderedStudent = studentService.GetStudentById(b.Studentnummer);
+
+                    Order.SubItems.Add(OrderedStudent.Studentname.ToString());
+
+                    lv_Bestelling.Items.Add(Order);
+                }
+
             }
             else if (panelName == "Omzetrapportage")
             {
@@ -203,6 +268,7 @@ namespace SomerenUI
                 pnl_Students.Hide();
                 pnl_Lecturers.Hide();
                 pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
 
@@ -251,6 +317,11 @@ namespace SomerenUI
             ShowPanel("Rooms");
         }
 
+        private void ActivitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPanel("Activities");
+        }
+
         private void DrankvoorraadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowPanel("Drank");
@@ -266,6 +337,7 @@ namespace SomerenUI
             ShowPanel("Omzetrapportage");
         }
 
+        // methode met de code voor het klikken op de bestellingsknop in het bestellingsmenu
         private void OrderBtn_Click(object sender, EventArgs e)
         {
             Student_Service sService = new Student_Service();
@@ -336,8 +408,11 @@ namespace SomerenUI
 
         }
 
+        //code van de methode voor het klikken op de bereken omzet knop van de Omzetrapportage
         private void OmzetBtn_Click(object sender, EventArgs e)
         {
+            lblError.Text = "";
+
             lv_Omzet.Items.Clear();
 
             Bestelling_Kassa_Service bestellingService = new Bestelling_Kassa_Service();
@@ -397,7 +472,113 @@ namespace SomerenUI
                 lv_Omzet.Items.Add(Omzet);
 
             }
+
             ShowPanel("Omzetrapportage");
+        }
+
+        //code van de methode voor het wijzigen van de geselecteerde activiteit in een te wijzigen of verwijderen activiteit van de activiteitenlijst
+        private void Cmb_Activiteiten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            Activity_Service activityService = new Activity_Service();
+
+            //het op nul zetten van de text in de wijzigen/verwijderen textboxen (gebruikt bij testen/debuggen)
+            Txtactiviteitnr.Text = "";
+            Txtactiviteitomschrijving.Text = "";
+            Txtaantalstudenten.Text = "";
+            Txtaantaldocenten.Text = "";
+
+            EditOrDeleteCalendar.MaxSelectionCount = 1;
+
+            //de twee regels hieronder om de gebruikte ActiviteitcmbBoxToString() string te gebruiken om vervolgens  het juiste activiteitnummer te kunnen gebruiken om in de database te kunnen zoeken en op te halen (geen combobox indexnummers meer nodig)
+            string selectedActivity = cmb_Activiteiten.GetItemText(cmb_Activiteiten.SelectedItem);
+
+            int activitynumber = int.Parse(selectedActivity);
+
+            Activity activity = activityService.GetActivityById(activitynumber);
+
+            Txtactiviteitnr.Text = activity.Number.ToString();
+            Txtactiviteitomschrijving.Text = activity.Description.ToString();
+            EditOrDeleteCalendar.SelectionStart = activity.StartTime;
+            Txtaantalstudenten.Text = activity.NumberofStudents.ToString();
+            Txtaantaldocenten.Text = activity.NumberofLecturers.ToString();
+
+            Txtactiviteitnr.Enabled = false;
+
+        }
+
+        //Code voor de wijzigingsknop in en van de activiteiten in de activiteitenlijst
+        private void Btnwijzigen_Click(object sender, EventArgs e)
+        {
+            Activity_Service activityService = new Activity_Service();
+
+            int activityNumber = int.Parse(Txtactiviteitnr.Text);
+
+            string NewDescription = Txtactiviteitomschrijving.Text;
+
+            DateTime NewStartTime = EditOrDeleteCalendar.SelectionRange.Start;
+
+            int NewNumberofStudents = int.Parse(Txtaantalstudenten.Text);
+
+            int NewNumberofLecturers = int.Parse(Txtaantaldocenten.Text);
+
+            if(NewDescription != "" && NewStartTime != null && NewNumberofStudents != 0 && NewNumberofLecturers != 0)
+            {
+                activityService.EditActivity(activityNumber, NewDescription, NewStartTime, NewNumberofStudents, NewNumberofLecturers);
+            }
+            else
+            {
+                lbl_ActivityErrorMessage.Text = "Niet alle velden zijn volledig of correct ingevuld!";
+            }
+
+            ShowPanel("Activities");
+        }
+
+        //Code voor de verwijderknop in en van de activiteiten in de activiteitenlijst
+        private void Btnverwijderen_Click(object sender, EventArgs e)
+        {
+            string message = "Weet u zeker dat u deze activiteit wilt verwijderen?";
+            string caption = "Activiteit verwijderen";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+
+            if(result == DialogResult.No)
+            {
+                ShowPanel("Activities");
+            }
+            else if (result == DialogResult.Yes)
+            {
+                Activity_Service activityService = new Activity_Service();
+
+                int activityNumber = int.Parse(Txtactiviteitnr.Text);
+
+                activityService.DeleteActivity(activityNumber);
+            }
+
+            ShowPanel("Activities");
+        }
+
+        //code voor de toevoegknop van een nieuwe activiteit in de activiteitenlijst
+        private void Btntoevoegen_Click(object sender, EventArgs e)
+        {
+            Activity_Service activityService = new Activity_Service();
+
+            AddCalendar.MaxSelectionCount = 1;
+
+            string AddedDescription = Txtaddomschrijving.Text;
+
+            DateTime AddedStartTime = AddCalendar.SelectionRange.Start;
+
+            int AddedNumberofStudents = int.Parse(Txtaddstudentenaantal.Text);
+
+            int AddedNumberofLecturers = int.Parse(Txtadddocentenaantal.Text);
+
+            if (AddedDescription != "" && AddedStartTime != null && AddedNumberofStudents != 0 && AddedNumberofLecturers != 0)
+            {
+                activityService.AddNewActivity(AddedDescription, AddedStartTime, AddedNumberofStudents, AddedNumberofLecturers);
+            }
+
+            ShowPanel("Activities");
+
         }
     }
 }

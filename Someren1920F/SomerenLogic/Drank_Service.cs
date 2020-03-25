@@ -68,6 +68,7 @@ namespace SomerenLogic
             catch (Exception)
             {
                 Drank d = new Drank(3, "Nepdrank", 2, 3);
+
                 return d;
             }
         }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bestelling.cs" />
+    <Compile Include="Activity.cs" />
     <Compile Include="Voorraad.cs" />
     <Compile Include="Drank.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

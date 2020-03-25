@@ -42,26 +42,7 @@ namespace SomerenDAL
         {
             string query = "SELECT Drank.Dranknummer, Drank.dranknaam, hoeveelheid, Drank.verkoopprijs FROM Voorraad JOIN Drank ON Voorraad.Dranknummer = Drank.Dranknummer;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadDrankTables(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        private List<Drank> ReadDrankTables(DataTable dataTable)
-        {
-            List<Drank> dranken = new List<Drank>();
-
-            foreach(DataRow dr in dataTable.Rows)
-            {
-                int Number = (int)dr["Dranknummer"];
-                string Name = (string)dr["dranknaam"];
-                int Amount = (int)dr["hoeveelheid"];
-                decimal Price = (decimal)dr["verkoopprijs"];
-
-                Drank drink = new Drank(Number, Name, Amount, Price);
-
-                dranken.Add(drink);
-            }
-
-            return dranken;
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public Drank GetById(int DrankId)

@@ -18,3 +18,8 @@ S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en on
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenModel\obj\Debug\SomerenModel.dll
 S:\Inholland\Project Databases\Project inhoudelijk (consultantgerelateerd) en ontwikkelinstructies\Opdrachten week 3\Someren1920F\SomerenModel\obj\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenModel\bin\Debug\SomerenModel.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenModel\bin\Debug\SomerenModel.pdb
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenModel\obj\Debug\SomerenModel.csprojAssemblyReference.cache
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenModel\obj\Debug\SomerenModel.dll
+S:\Inholland\Project Databases\GithubDatabaseRepository\Someren1920F\SomerenModel\obj\Debug\SomerenModel.pdb

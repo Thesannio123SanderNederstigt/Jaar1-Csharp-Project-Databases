@@ -38,7 +38,7 @@
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ActivitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DrankvoorraadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OmzetrapportageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,18 +84,53 @@
             this.lbl_Kassa = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnl_Omzetrapportage = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lbl_Omzetrapportage = new System.Windows.Forms.Label();
-            this.lbl_Startdatum = new System.Windows.Forms.Label();
-            this.lbl_Einddatum = new System.Windows.Forms.Label();
-            this.StartCalendar = new System.Windows.Forms.MonthCalendar();
-            this.EindCalendar = new System.Windows.Forms.MonthCalendar();
+            this.OmzetBtn = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.lv_Omzet = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lblError = new System.Windows.Forms.Label();
-            this.OmzetBtn = new System.Windows.Forms.Button();
+            this.EindCalendar = new System.Windows.Forms.MonthCalendar();
+            this.StartCalendar = new System.Windows.Forms.MonthCalendar();
+            this.lbl_Einddatum = new System.Windows.Forms.Label();
+            this.lbl_Startdatum = new System.Windows.Forms.Label();
+            this.lbl_Omzetrapportage = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pnl_Activiteitenlijst = new System.Windows.Forms.Panel();
+            this.lbl_aanvangstijd = new System.Windows.Forms.Label();
+            this.AddCalendar = new System.Windows.Forms.MonthCalendar();
+            this.label_aanvangstijd = new System.Windows.Forms.Label();
+            this.label_Aantaldocenten = new System.Windows.Forms.Label();
+            this.label_Aantalstudenten = new System.Windows.Forms.Label();
+            this.lbl_Activiteitomschrijving = new System.Windows.Forms.Label();
+            this.lbl_Activiteitnummer = new System.Windows.Forms.Label();
+            this.Btnverwijderen = new System.Windows.Forms.Button();
+            this.Btnwijzigen = new System.Windows.Forms.Button();
+            this.Txtactiviteitomschrijving = new System.Windows.Forms.TextBox();
+            this.Txtaantaldocenten = new System.Windows.Forms.TextBox();
+            this.Txtaantalstudenten = new System.Windows.Forms.TextBox();
+            this.Txtactiviteitnr = new System.Windows.Forms.TextBox();
+            this.lbl_activiteitselecteren = new System.Windows.Forms.Label();
+            this.cmb_Activiteiten = new System.Windows.Forms.ComboBox();
+            this.lbl_activiteitwijzigenofverwijderen = new System.Windows.Forms.Label();
+            this.Btntoevoegen = new System.Windows.Forms.Button();
+            this.lbl_activiteittoevoegen = new System.Windows.Forms.Label();
+            this.lbl_aantaldocenten = new System.Windows.Forms.Label();
+            this.lbl_aantalstudenten = new System.Windows.Forms.Label();
+            this.Txtadddocentenaantal = new System.Windows.Forms.TextBox();
+            this.Txtaddstudentenaantal = new System.Windows.Forms.TextBox();
+            this.lbl_Omschrijving = new System.Windows.Forms.Label();
+            this.Txtaddomschrijving = new System.Windows.Forms.TextBox();
+            this.lv_Activiteitenlijst = new System.Windows.Forms.ListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.lbl_Activiteitenlijst = new System.Windows.Forms.Label();
+            this.EditOrDeleteCalendar = new System.Windows.Forms.MonthCalendar();
+            this.lbl_ActivityErrorMessage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
@@ -111,6 +146,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnl_Omzetrapportage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pnl_Activiteitenlijst.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // img_Dashboard
@@ -129,7 +166,7 @@
             this.studentsToolStripMenuItem,
             this.lecturersToolStripMenuItem,
             this.roomsToolStripMenuItem,
-            this.activitiesToolStripMenuItem,
+            this.ActivitiesToolStripMenuItem,
             this.DrankvoorraadToolStripMenuItem,
             this.KassaToolStripMenuItem,
             this.OmzetrapportageToolStripMenuItem});
@@ -190,11 +227,12 @@
             this.roomsToolStripMenuItem.Text = "Rooms";
             this.roomsToolStripMenuItem.Click += new System.EventHandler(this.RoomsToolStripMenuItem_Click);
             // 
-            // activitiesToolStripMenuItem
+            // ActivitiesToolStripMenuItem
             // 
-            this.activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
-            this.activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.activitiesToolStripMenuItem.Text = "Activities";
+            this.ActivitiesToolStripMenuItem.Name = "ActivitiesToolStripMenuItem";
+            this.ActivitiesToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.ActivitiesToolStripMenuItem.Text = "Activiteitenlijst";
+            this.ActivitiesToolStripMenuItem.Click += new System.EventHandler(this.ActivitiesToolStripMenuItem_Click);
             // 
             // DrankvoorraadToolStripMenuItem
             // 
@@ -597,57 +635,25 @@
             this.pnl_Omzetrapportage.Size = new System.Drawing.Size(940, 472);
             this.pnl_Omzetrapportage.TabIndex = 9;
             // 
-            // pictureBox6
+            // OmzetBtn
             // 
-            this.pictureBox6.Image = global::SomerenUI.Properties.Resources.someren;
-            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(810, 0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(130, 123);
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
+            this.OmzetBtn.Location = new System.Drawing.Point(618, 221);
+            this.OmzetBtn.Name = "OmzetBtn";
+            this.OmzetBtn.Size = new System.Drawing.Size(108, 23);
+            this.OmzetBtn.TabIndex = 19;
+            this.OmzetBtn.Text = "Bereken Omzet";
+            this.OmzetBtn.UseVisualStyleBackColor = true;
+            this.OmzetBtn.Click += new System.EventHandler(this.OmzetBtn_Click);
             // 
-            // lbl_Omzetrapportage
+            // lblError
             // 
-            this.lbl_Omzetrapportage.AutoSize = true;
-            this.lbl_Omzetrapportage.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Omzetrapportage.Location = new System.Drawing.Point(13, 23);
-            this.lbl_Omzetrapportage.Name = "lbl_Omzetrapportage";
-            this.lbl_Omzetrapportage.Size = new System.Drawing.Size(201, 29);
-            this.lbl_Omzetrapportage.TabIndex = 11;
-            this.lbl_Omzetrapportage.Text = "Omzetrapportage";
-            // 
-            // lbl_Startdatum
-            // 
-            this.lbl_Startdatum.AutoSize = true;
-            this.lbl_Startdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Startdatum.Location = new System.Drawing.Point(23, 79);
-            this.lbl_Startdatum.Name = "lbl_Startdatum";
-            this.lbl_Startdatum.Size = new System.Drawing.Size(197, 25);
-            this.lbl_Startdatum.TabIndex = 12;
-            this.lbl_Startdatum.Text = "Selecteer startdatum:";
-            // 
-            // lbl_Einddatum
-            // 
-            this.lbl_Einddatum.AutoSize = true;
-            this.lbl_Einddatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Einddatum.Location = new System.Drawing.Point(264, 79);
-            this.lbl_Einddatum.Name = "lbl_Einddatum";
-            this.lbl_Einddatum.Size = new System.Drawing.Size(197, 25);
-            this.lbl_Einddatum.TabIndex = 13;
-            this.lbl_Einddatum.Text = "Selecteer einddatum:";
-            // 
-            // StartCalendar
-            // 
-            this.StartCalendar.Location = new System.Drawing.Point(33, 115);
-            this.StartCalendar.Name = "StartCalendar";
-            this.StartCalendar.TabIndex = 14;
-            // 
-            // EindCalendar
-            // 
-            this.EindCalendar.Location = new System.Drawing.Point(275, 115);
-            this.EindCalendar.Name = "EindCalendar";
-            this.EindCalendar.TabIndex = 15;
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Location = new System.Drawing.Point(168, 355);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(12, 17);
+            this.lblError.TabIndex = 18;
+            this.lblError.Text = " ";
             // 
             // lv_Omzet
             // 
@@ -678,31 +684,387 @@
             this.columnHeader11.Text = "Aantal klanten";
             this.columnHeader11.Width = 150;
             // 
-            // lblError
+            // EindCalendar
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.Location = new System.Drawing.Point(168, 355);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(12, 17);
-            this.lblError.TabIndex = 18;
-            this.lblError.Text = " ";
+            this.EindCalendar.Location = new System.Drawing.Point(275, 115);
+            this.EindCalendar.Name = "EindCalendar";
+            this.EindCalendar.TabIndex = 15;
             // 
-            // OmzetBtn
+            // StartCalendar
             // 
-            this.OmzetBtn.Location = new System.Drawing.Point(618, 221);
-            this.OmzetBtn.Name = "OmzetBtn";
-            this.OmzetBtn.Size = new System.Drawing.Size(108, 23);
-            this.OmzetBtn.TabIndex = 19;
-            this.OmzetBtn.Text = "Bereken Omzet";
-            this.OmzetBtn.UseVisualStyleBackColor = true;
-            this.OmzetBtn.Click += new System.EventHandler(this.OmzetBtn_Click);
+            this.StartCalendar.Location = new System.Drawing.Point(33, 115);
+            this.StartCalendar.Name = "StartCalendar";
+            this.StartCalendar.TabIndex = 14;
+            // 
+            // lbl_Einddatum
+            // 
+            this.lbl_Einddatum.AutoSize = true;
+            this.lbl_Einddatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Einddatum.Location = new System.Drawing.Point(264, 79);
+            this.lbl_Einddatum.Name = "lbl_Einddatum";
+            this.lbl_Einddatum.Size = new System.Drawing.Size(197, 25);
+            this.lbl_Einddatum.TabIndex = 13;
+            this.lbl_Einddatum.Text = "Selecteer einddatum:";
+            // 
+            // lbl_Startdatum
+            // 
+            this.lbl_Startdatum.AutoSize = true;
+            this.lbl_Startdatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Startdatum.Location = new System.Drawing.Point(23, 79);
+            this.lbl_Startdatum.Name = "lbl_Startdatum";
+            this.lbl_Startdatum.Size = new System.Drawing.Size(197, 25);
+            this.lbl_Startdatum.TabIndex = 12;
+            this.lbl_Startdatum.Text = "Selecteer startdatum:";
+            // 
+            // lbl_Omzetrapportage
+            // 
+            this.lbl_Omzetrapportage.AutoSize = true;
+            this.lbl_Omzetrapportage.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Omzetrapportage.Location = new System.Drawing.Point(13, 23);
+            this.lbl_Omzetrapportage.Name = "lbl_Omzetrapportage";
+            this.lbl_Omzetrapportage.Size = new System.Drawing.Size(201, 29);
+            this.lbl_Omzetrapportage.TabIndex = 11;
+            this.lbl_Omzetrapportage.Text = "Omzetrapportage";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
+            this.pictureBox6.Location = new System.Drawing.Point(810, 0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pnl_Activiteitenlijst
+            // 
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_ActivityErrorMessage);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_aanvangstijd);
+            this.pnl_Activiteitenlijst.Controls.Add(this.AddCalendar);
+            this.pnl_Activiteitenlijst.Controls.Add(this.label_aanvangstijd);
+            this.pnl_Activiteitenlijst.Controls.Add(this.EditOrDeleteCalendar);
+            this.pnl_Activiteitenlijst.Controls.Add(this.label_Aantaldocenten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.label_Aantalstudenten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_Activiteitomschrijving);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_Activiteitnummer);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Btnverwijderen);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Btnwijzigen);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtactiviteitomschrijving);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtaantaldocenten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtaantalstudenten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtactiviteitnr);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_activiteitselecteren);
+            this.pnl_Activiteitenlijst.Controls.Add(this.cmb_Activiteiten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_activiteitwijzigenofverwijderen);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Btntoevoegen);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_activiteittoevoegen);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_aantaldocenten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_aantalstudenten);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtadddocentenaantal);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtaddstudentenaantal);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_Omschrijving);
+            this.pnl_Activiteitenlijst.Controls.Add(this.Txtaddomschrijving);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lv_Activiteitenlijst);
+            this.pnl_Activiteitenlijst.Controls.Add(this.pictureBox7);
+            this.pnl_Activiteitenlijst.Controls.Add(this.lbl_Activiteitenlijst);
+            this.pnl_Activiteitenlijst.Location = new System.Drawing.Point(10, 21);
+            this.pnl_Activiteitenlijst.Name = "pnl_Activiteitenlijst";
+            this.pnl_Activiteitenlijst.Size = new System.Drawing.Size(940, 472);
+            this.pnl_Activiteitenlijst.TabIndex = 10;
+            // 
+            // lbl_aanvangstijd
+            // 
+            this.lbl_aanvangstijd.AutoSize = true;
+            this.lbl_aanvangstijd.Location = new System.Drawing.Point(804, 280);
+            this.lbl_aanvangstijd.Name = "lbl_aanvangstijd";
+            this.lbl_aanvangstijd.Size = new System.Drawing.Size(68, 13);
+            this.lbl_aanvangstijd.TabIndex = 43;
+            this.lbl_aanvangstijd.Text = "Aanvangstijd";
+            // 
+            // AddCalendar
+            // 
+            this.AddCalendar.Location = new System.Drawing.Point(758, 293);
+            this.AddCalendar.Name = "AddCalendar";
+            this.AddCalendar.TabIndex = 42;
+            // 
+            // label_aanvangstijd
+            // 
+            this.label_aanvangstijd.AutoSize = true;
+            this.label_aanvangstijd.Location = new System.Drawing.Point(448, 217);
+            this.label_aanvangstijd.Name = "label_aanvangstijd";
+            this.label_aanvangstijd.Size = new System.Drawing.Size(68, 13);
+            this.label_aanvangstijd.TabIndex = 41;
+            this.label_aanvangstijd.Text = "Aanvangstijd";
+            // 
+            // label_Aantaldocenten
+            // 
+            this.label_Aantaldocenten.AutoSize = true;
+            this.label_Aantaldocenten.Location = new System.Drawing.Point(116, 350);
+            this.label_Aantaldocenten.Name = "label_Aantaldocenten";
+            this.label_Aantaldocenten.Size = new System.Drawing.Size(85, 13);
+            this.label_Aantaldocenten.TabIndex = 39;
+            this.label_Aantaldocenten.Text = "Aantal docenten";
+            // 
+            // label_Aantalstudenten
+            // 
+            this.label_Aantalstudenten.AutoSize = true;
+            this.label_Aantalstudenten.Location = new System.Drawing.Point(21, 350);
+            this.label_Aantalstudenten.Name = "label_Aantalstudenten";
+            this.label_Aantalstudenten.Size = new System.Drawing.Size(87, 13);
+            this.label_Aantalstudenten.TabIndex = 38;
+            this.label_Aantalstudenten.Text = "Aantal studenten";
+            // 
+            // lbl_Activiteitomschrijving
+            // 
+            this.lbl_Activiteitomschrijving.AutoSize = true;
+            this.lbl_Activiteitomschrijving.Location = new System.Drawing.Point(114, 291);
+            this.lbl_Activiteitomschrijving.Name = "lbl_Activiteitomschrijving";
+            this.lbl_Activiteitomschrijving.Size = new System.Drawing.Size(108, 13);
+            this.lbl_Activiteitomschrijving.TabIndex = 37;
+            this.lbl_Activiteitomschrijving.Text = "Activiteit omschrijving";
+            // 
+            // lbl_Activiteitnummer
+            // 
+            this.lbl_Activiteitnummer.AutoSize = true;
+            this.lbl_Activiteitnummer.Location = new System.Drawing.Point(20, 291);
+            this.lbl_Activiteitnummer.Name = "lbl_Activiteitnummer";
+            this.lbl_Activiteitnummer.Size = new System.Drawing.Size(84, 13);
+            this.lbl_Activiteitnummer.TabIndex = 36;
+            this.lbl_Activiteitnummer.Text = "Activiteitnummer";
+            // 
+            // Btnverwijderen
+            // 
+            this.Btnverwijderen.Location = new System.Drawing.Point(296, 367);
+            this.Btnverwijderen.Name = "Btnverwijderen";
+            this.Btnverwijderen.Size = new System.Drawing.Size(75, 23);
+            this.Btnverwijderen.TabIndex = 35;
+            this.Btnverwijderen.Text = "Verwijderen";
+            this.Btnverwijderen.UseVisualStyleBackColor = true;
+            this.Btnverwijderen.Click += new System.EventHandler(this.Btnverwijderen_Click);
+            // 
+            // Btnwijzigen
+            // 
+            this.Btnwijzigen.Location = new System.Drawing.Point(206, 367);
+            this.Btnwijzigen.Name = "Btnwijzigen";
+            this.Btnwijzigen.Size = new System.Drawing.Size(75, 23);
+            this.Btnwijzigen.TabIndex = 34;
+            this.Btnwijzigen.Text = "Wijzigen";
+            this.Btnwijzigen.UseVisualStyleBackColor = true;
+            this.Btnwijzigen.Click += new System.EventHandler(this.Btnwijzigen_Click);
+            // 
+            // Txtactiviteitomschrijving
+            // 
+            this.Txtactiviteitomschrijving.Location = new System.Drawing.Point(113, 307);
+            this.Txtactiviteitomschrijving.Multiline = true;
+            this.Txtactiviteitomschrijving.Name = "Txtactiviteitomschrijving";
+            this.Txtactiviteitomschrijving.Size = new System.Drawing.Size(280, 21);
+            this.Txtactiviteitomschrijving.TabIndex = 33;
+            // 
+            // Txtaantaldocenten
+            // 
+            this.Txtaantaldocenten.Location = new System.Drawing.Point(115, 367);
+            this.Txtaantaldocenten.Name = "Txtaantaldocenten";
+            this.Txtaantaldocenten.Size = new System.Drawing.Size(54, 20);
+            this.Txtaantaldocenten.TabIndex = 32;
+            // 
+            // Txtaantalstudenten
+            // 
+            this.Txtaantalstudenten.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Txtaantalstudenten.Location = new System.Drawing.Point(25, 367);
+            this.Txtaantalstudenten.Name = "Txtaantalstudenten";
+            this.Txtaantalstudenten.Size = new System.Drawing.Size(54, 20);
+            this.Txtaantalstudenten.TabIndex = 31;
+            // 
+            // Txtactiviteitnr
+            // 
+            this.Txtactiviteitnr.Location = new System.Drawing.Point(25, 306);
+            this.Txtactiviteitnr.Multiline = true;
+            this.Txtactiviteitnr.Name = "Txtactiviteitnr";
+            this.Txtactiviteitnr.Size = new System.Drawing.Size(47, 21);
+            this.Txtactiviteitnr.TabIndex = 30;
+            // 
+            // lbl_activiteitselecteren
+            // 
+            this.lbl_activiteitselecteren.AutoSize = true;
+            this.lbl_activiteitselecteren.Location = new System.Drawing.Point(26, 231);
+            this.lbl_activiteitselecteren.Name = "lbl_activiteitselecteren";
+            this.lbl_activiteitselecteren.Size = new System.Drawing.Size(99, 13);
+            this.lbl_activiteitselecteren.TabIndex = 29;
+            this.lbl_activiteitselecteren.Text = "Activiteit selecteren";
+            // 
+            // cmb_Activiteiten
+            // 
+            this.cmb_Activiteiten.FormattingEnabled = true;
+            this.cmb_Activiteiten.Location = new System.Drawing.Point(25, 251);
+            this.cmb_Activiteiten.Name = "cmb_Activiteiten";
+            this.cmb_Activiteiten.Size = new System.Drawing.Size(368, 21);
+            this.cmb_Activiteiten.TabIndex = 28;
+            this.cmb_Activiteiten.SelectedIndexChanged += new System.EventHandler(this.Cmb_Activiteiten_SelectedIndexChanged);
+            // 
+            // lbl_activiteitwijzigenofverwijderen
+            // 
+            this.lbl_activiteitwijzigenofverwijderen.AutoSize = true;
+            this.lbl_activiteitwijzigenofverwijderen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_activiteitwijzigenofverwijderen.Location = new System.Drawing.Point(19, 193);
+            this.lbl_activiteitwijzigenofverwijderen.Name = "lbl_activiteitwijzigenofverwijderen";
+            this.lbl_activiteitwijzigenofverwijderen.Size = new System.Drawing.Size(273, 24);
+            this.lbl_activiteitwijzigenofverwijderen.TabIndex = 27;
+            this.lbl_activiteitwijzigenofverwijderen.Text = "Activiteit wijzigen of verwijderen";
+            // 
+            // Btntoevoegen
+            // 
+            this.Btntoevoegen.Location = new System.Drawing.Point(657, 395);
+            this.Btntoevoegen.Name = "Btntoevoegen";
+            this.Btntoevoegen.Size = new System.Drawing.Size(75, 23);
+            this.Btntoevoegen.TabIndex = 26;
+            this.Btntoevoegen.Text = "Toevoegen";
+            this.Btntoevoegen.UseVisualStyleBackColor = true;
+            this.Btntoevoegen.Click += new System.EventHandler(this.Btntoevoegen_Click);
+            // 
+            // lbl_activiteittoevoegen
+            // 
+            this.lbl_activiteittoevoegen.AutoSize = true;
+            this.lbl_activiteittoevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_activiteittoevoegen.Location = new System.Drawing.Point(705, 195);
+            this.lbl_activiteittoevoegen.Name = "lbl_activiteittoevoegen";
+            this.lbl_activiteittoevoegen.Size = new System.Drawing.Size(172, 24);
+            this.lbl_activiteittoevoegen.TabIndex = 25;
+            this.lbl_activiteittoevoegen.Text = "Activiteit toevoegen";
+            // 
+            // lbl_aantaldocenten
+            // 
+            this.lbl_aantaldocenten.AutoSize = true;
+            this.lbl_aantaldocenten.Location = new System.Drawing.Point(647, 336);
+            this.lbl_aantaldocenten.Name = "lbl_aantaldocenten";
+            this.lbl_aantaldocenten.Size = new System.Drawing.Size(85, 13);
+            this.lbl_aantaldocenten.TabIndex = 24;
+            this.lbl_aantaldocenten.Text = "Aantal docenten";
+            // 
+            // lbl_aantalstudenten
+            // 
+            this.lbl_aantalstudenten.AutoSize = true;
+            this.lbl_aantalstudenten.Location = new System.Drawing.Point(644, 281);
+            this.lbl_aantalstudenten.Name = "lbl_aantalstudenten";
+            this.lbl_aantalstudenten.Size = new System.Drawing.Size(87, 13);
+            this.lbl_aantalstudenten.TabIndex = 23;
+            this.lbl_aantalstudenten.Text = "Aantal studenten";
+            // 
+            // Txtadddocentenaantal
+            // 
+            this.Txtadddocentenaantal.Location = new System.Drawing.Point(647, 352);
+            this.Txtadddocentenaantal.Name = "Txtadddocentenaantal";
+            this.Txtadddocentenaantal.Size = new System.Drawing.Size(100, 20);
+            this.Txtadddocentenaantal.TabIndex = 22;
+            // 
+            // Txtaddstudentenaantal
+            // 
+            this.Txtaddstudentenaantal.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Txtaddstudentenaantal.Location = new System.Drawing.Point(647, 297);
+            this.Txtaddstudentenaantal.Name = "Txtaddstudentenaantal";
+            this.Txtaddstudentenaantal.Size = new System.Drawing.Size(100, 20);
+            this.Txtaddstudentenaantal.TabIndex = 21;
+            // 
+            // lbl_Omschrijving
+            // 
+            this.lbl_Omschrijving.AutoSize = true;
+            this.lbl_Omschrijving.Location = new System.Drawing.Point(652, 220);
+            this.lbl_Omschrijving.Name = "lbl_Omschrijving";
+            this.lbl_Omschrijving.Size = new System.Drawing.Size(108, 13);
+            this.lbl_Omschrijving.TabIndex = 20;
+            this.lbl_Omschrijving.Text = "Activiteit omschrijving";
+            // 
+            // Txtaddomschrijving
+            // 
+            this.Txtaddomschrijving.Location = new System.Drawing.Point(647, 236);
+            this.Txtaddomschrijving.Multiline = true;
+            this.Txtaddomschrijving.Name = "Txtaddomschrijving";
+            this.Txtaddomschrijving.Size = new System.Drawing.Size(285, 38);
+            this.Txtaddomschrijving.TabIndex = 19;
+            // 
+            // lv_Activiteitenlijst
+            // 
+            this.lv_Activiteitenlijst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16});
+            this.lv_Activiteitenlijst.HideSelection = false;
+            this.lv_Activiteitenlijst.Location = new System.Drawing.Point(25, 45);
+            this.lv_Activiteitenlijst.Name = "lv_Activiteitenlijst";
+            this.lv_Activiteitenlijst.Size = new System.Drawing.Size(759, 135);
+            this.lv_Activiteitenlijst.TabIndex = 18;
+            this.lv_Activiteitenlijst.UseCompatibleStateImageBehavior = false;
+            this.lv_Activiteitenlijst.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Activiteitnummer";
+            this.columnHeader12.Width = 100;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Omschrijving";
+            this.columnHeader13.Width = 300;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Aanvangstijd";
+            this.columnHeader14.Width = 150;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Aantal studenten";
+            this.columnHeader15.Width = 100;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Aantal docenten";
+            this.columnHeader16.Width = 100;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::SomerenUI.Properties.Resources.someren;
+            this.pictureBox7.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.InitialImage")));
+            this.pictureBox7.Location = new System.Drawing.Point(810, 0);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(130, 123);
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
+            // 
+            // lbl_Activiteitenlijst
+            // 
+            this.lbl_Activiteitenlijst.AutoSize = true;
+            this.lbl_Activiteitenlijst.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Activiteitenlijst.Location = new System.Drawing.Point(23, 12);
+            this.lbl_Activiteitenlijst.Name = "lbl_Activiteitenlijst";
+            this.lbl_Activiteitenlijst.Size = new System.Drawing.Size(164, 29);
+            this.lbl_Activiteitenlijst.TabIndex = 12;
+            this.lbl_Activiteitenlijst.Text = "Activiteitenlijst";
+            // 
+            // EditOrDeleteCalendar
+            // 
+            this.EditOrDeleteCalendar.Location = new System.Drawing.Point(402, 233);
+            this.EditOrDeleteCalendar.Name = "EditOrDeleteCalendar";
+            this.EditOrDeleteCalendar.TabIndex = 40;
+            // 
+            // lbl_ActivityErrorMessage
+            // 
+            this.lbl_ActivityErrorMessage.AutoSize = true;
+            this.lbl_ActivityErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ActivityErrorMessage.Location = new System.Drawing.Point(3, 439);
+            this.lbl_ActivityErrorMessage.Name = "lbl_ActivityErrorMessage";
+            this.lbl_ActivityErrorMessage.Size = new System.Drawing.Size(754, 20);
+            this.lbl_ActivityErrorMessage.TabIndex = 44;
+            this.lbl_ActivityErrorMessage.Text = "Voor het toevoegen of wijzigen van een activiteit moeten alle bijbehorende velden" +
+    " correct worden ingevuld!";
             // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 505);
+            this.Controls.Add(this.pnl_Activiteitenlijst);
             this.Controls.Add(this.pnl_Omzetrapportage);
             this.Controls.Add(this.pnl_Kassa);
             this.Controls.Add(this.pnl_Drank);
@@ -740,6 +1102,9 @@
             this.pnl_Omzetrapportage.ResumeLayout(false);
             this.pnl_Omzetrapportage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.pnl_Activiteitenlijst.ResumeLayout(false);
+            this.pnl_Activiteitenlijst.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -757,7 +1122,7 @@
         private System.Windows.Forms.Label lbl_Dashboard;
         private System.Windows.Forms.ToolStripMenuItem studentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lecturersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activitiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ActivitiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roomsToolStripMenuItem;
         private System.Windows.Forms.Panel pnl_Students;
         private System.Windows.Forms.Label lbl_Students;
@@ -814,6 +1179,41 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Button OmzetBtn;
+        private System.Windows.Forms.Panel pnl_Activiteitenlijst;
+        private System.Windows.Forms.ListView lv_Activiteitenlijst;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label lbl_Activiteitenlijst;
+        private System.Windows.Forms.Label lbl_aantaldocenten;
+        private System.Windows.Forms.Label lbl_aantalstudenten;
+        private System.Windows.Forms.TextBox Txtadddocentenaantal;
+        private System.Windows.Forms.TextBox Txtaddstudentenaantal;
+        private System.Windows.Forms.Label lbl_Omschrijving;
+        private System.Windows.Forms.TextBox Txtaddomschrijving;
+        private System.Windows.Forms.Button Btnverwijderen;
+        private System.Windows.Forms.Button Btnwijzigen;
+        private System.Windows.Forms.TextBox Txtactiviteitomschrijving;
+        private System.Windows.Forms.TextBox Txtaantaldocenten;
+        private System.Windows.Forms.TextBox Txtaantalstudenten;
+        private System.Windows.Forms.TextBox Txtactiviteitnr;
+        private System.Windows.Forms.Label lbl_activiteitselecteren;
+        private System.Windows.Forms.ComboBox cmb_Activiteiten;
+        private System.Windows.Forms.Label lbl_activiteitwijzigenofverwijderen;
+        private System.Windows.Forms.Button Btntoevoegen;
+        private System.Windows.Forms.Label lbl_activiteittoevoegen;
+        private System.Windows.Forms.Label label_Aantaldocenten;
+        private System.Windows.Forms.Label label_Aantalstudenten;
+        private System.Windows.Forms.Label lbl_Activiteitomschrijving;
+        private System.Windows.Forms.Label lbl_Activiteitnummer;
+        private System.Windows.Forms.Label label_aanvangstijd;
+        private System.Windows.Forms.Label lbl_aanvangstijd;
+        private System.Windows.Forms.MonthCalendar AddCalendar;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.MonthCalendar EditOrDeleteCalendar;
+        private System.Windows.Forms.Label lbl_ActivityErrorMessage;
     }
 }
 
