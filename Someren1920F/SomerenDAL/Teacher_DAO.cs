@@ -37,5 +37,29 @@ namespace SomerenDAL
 
             return teachers;
         }
+
+        public Teacher GetById(int TeacherId)
+        {
+            string query = "SELECT Docentnummer, docentnaam, schoolvak, Docentenkamernummer FROM Docent WHERE Docentnummer = @Id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", TeacherId) };
+            return ReadTeacher(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private Teacher ReadTeacher(DataTable dataTable)
+        {
+            Teacher teacher = null;
+
+            foreach(DataRow dr in dataTable.Rows)
+            {
+                int Number = (int)dr["Docentnummer"];
+                string Name = (string)dr["docentnaam"];
+                string Subject = (string)dr["schoolvak"];
+                int Roomnumber = (int)dr["Docentenkamernummer"];
+
+                teacher = new Teacher(Number, Name, Subject, Roomnumber);
+            }
+
+            return teacher;
+        }
     }
 }

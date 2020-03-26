@@ -30,5 +30,18 @@ namespace SomerenLogic
             }
 
         }
+
+        public Teacher GetTeacherById(int TeacherId)
+        {
+            try
+            {
+                return teacher_db.GetById(TeacherId);
+            }
+            catch(Exception)
+            {
+                Teacher t = new Teacher(1, "Error", "something went wrong", 1);
+                return t;
+            }
+        }
     }
 }

@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Bestelling_Kassa_Service.cs" />
     <Compile Include="Activity_Service.cs" />
+    <Compile Include="Begeleider_Service.cs" />
     <Compile Include="Voorraad_Service.cs" />
     <Compile Include="Drank_Service.cs" />
     <Compile Include="Room_Service.cs" />

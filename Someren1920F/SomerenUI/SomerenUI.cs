@@ -39,6 +39,7 @@ namespace SomerenUI
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 // show dashboard
                 pnl_Dashboard.Show();
@@ -55,6 +56,7 @@ namespace SomerenUI
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 // show students
                 pnl_Students.Show();
@@ -86,6 +88,7 @@ namespace SomerenUI
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 pnl_Lecturers.Show();
 
@@ -110,6 +113,7 @@ namespace SomerenUI
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 pnl_Rooms.Show();
 
@@ -135,6 +139,7 @@ namespace SomerenUI
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 pnl_Activiteitenlijst.Show();
 
@@ -170,6 +175,7 @@ namespace SomerenUI
                 pnl_Activiteitenlijst.Hide();
                 pnl_Kassa.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 //show the Drinks panel
                 pnl_Drank.Show();
@@ -202,6 +208,7 @@ namespace SomerenUI
                 pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Omzetrapportage.Hide();
+                pnl_Begeleiders.Hide();
 
                 //show the Kassa panel
                 pnl_Kassa.Show();
@@ -271,12 +278,60 @@ namespace SomerenUI
                 pnl_Activiteitenlijst.Hide();
                 pnl_Drank.Hide();
                 pnl_Kassa.Hide();
+                pnl_Begeleiders.Hide();
 
                 //show this panel
                 pnl_Omzetrapportage.Show();
 
                
 
+            }
+            else if (panelName == "Begeleiders")
+            {
+                //Hide all the other panels
+                pnl_Dashboard.Hide();
+                img_Dashboard.Hide();
+                pnl_Students.Hide();
+                pnl_Lecturers.Hide();
+                pnl_Rooms.Hide();
+                pnl_Activiteitenlijst.Hide();
+                pnl_Drank.Hide();
+                pnl_Kassa.Hide();
+                pnl_Omzetrapportage.Hide();
+
+                //show this panel
+                pnl_Begeleiders.Show();
+
+                Begeleider_Service begeleiderService = new Begeleider_Service();
+                List<Begeleider> begeleiderList = begeleiderService.GetBegeleiders();
+
+                lv_Begeleiders.Items.Clear();
+                cmb_Begeleiders.Items.Clear();
+
+                foreach (Begeleider b in begeleiderList)
+                {
+                    ListViewItem li = new ListViewItem(b.Begeleidernummer.ToString());
+                    li.SubItems.Add(b.Teachernumber.ToString());
+                    li.SubItems.Add(b.Teachername.ToString());
+                    li.SubItems.Add(b.Subject.ToString());
+                    li.SubItems.Add(b.Teacherroomnumber.ToString());
+                    lv_Begeleiders.Items.Add(li);
+
+                    cmb_Begeleiders.Items.Add(b.Begeleidernummer.ToString());
+                }
+
+                cmb_Begeleiders.SelectedIndex = 0;
+
+                Teacher_Service teacherService = new Teacher_Service();
+                List<Teacher> teacherList = teacherService.GetTeachers();
+
+                cmb_Docenten.Items.Clear();
+
+                foreach (Teacher t in teacherList)
+                {
+                    cmb_Docenten.Items.Add(t.Teachernumber);
+                }
+                cmb_Docenten.SelectedIndex = 0;
             }
         }
 
@@ -335,6 +390,10 @@ namespace SomerenUI
         private void OmzetrapportageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowPanel("Omzetrapportage");
+        }
+        private void BegeleidersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPanel("Begeleiders");
         }
 
         // methode met de code voor het klikken op de bestellingsknop in het bestellingsmenu
@@ -490,7 +549,7 @@ namespace SomerenUI
 
             EditOrDeleteCalendar.MaxSelectionCount = 1;
 
-            //de twee regels hieronder om de gebruikte ActiviteitcmbBoxToString() string te gebruiken om vervolgens  het juiste activiteitnummer te kunnen gebruiken om in de database te kunnen zoeken en op te halen (geen combobox indexnummers meer nodig)
+            //de twee regels hieronder om de gebruikte ActiviteitcmbBoxToString() string te gebruiken om vervolgens het juiste activiteitnummer te kunnen gebruiken om in de database te kunnen zoeken en op te halen (geen combobox indexnummers meer nodig)
             string selectedActivity = cmb_Activiteiten.GetItemText(cmb_Activiteiten.SelectedItem);
 
             int activitynumber = int.Parse(selectedActivity);
@@ -578,6 +637,95 @@ namespace SomerenUI
             }
 
             ShowPanel("Activities");
+
+        }
+
+        //code voor het wijzigen van de inhoud van de te selecteren Docent combobox voor het toevoegen van een Docent als begeleider in het begeleiders venster
+        private void Cmb_Docenten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Teacher_Service teacherService = new Teacher_Service();
+
+            string selectedDocent = cmb_Docenten.GetItemText(cmb_Docenten.SelectedItem);
+
+            int teachernumber = int.Parse(selectedDocent);
+
+            Teacher selectedteacher = teacherService.GetTeacherById(teachernumber);
+
+            Txt_Docentnummeradd.Text = selectedteacher.Teachernumber.ToString();
+
+            Txt_Docentnaamtoadd.Text = selectedteacher.Teachername.ToString();
+
+            Txt_Docentnummeradd.Enabled = false;
+
+            Txt_Docentnaamtoadd.Enabled = false;
+        }
+
+        //code voor het klikken op de Toevoegen knop om een docent als begeleider toe te voegen in het begeleiders panel/venster
+        private void Btn_Begeleidertoevoegen_Click(object sender, EventArgs e)
+        {
+            Begeleider_Service begeleiderService = new Begeleider_Service();
+
+            int DocentNummer = int.Parse(Txt_Docentnummeradd.Text);
+
+            string DocentName = Txt_Docentnaamtoadd.ToString();
+
+            if(DocentNummer != 0 && DocentName != "")
+            {
+                begeleiderService.AddNewBegeleider(DocentNummer);
+            }
+
+            ShowPanel("Begeleiders");
+        }
+
+        //code voor het wijzigen van de inhoud van de te selecteren begeleider combobox voor het verwijderen van een begeleider in het begeleiders venster
+        private void Cmb_Begeleiders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            Begeleider_Service begeleiderService = new Begeleider_Service();
+
+            string selectedBegeleiderstring = cmb_Begeleiders.GetItemText(cmb_Begeleiders.SelectedItem);
+
+            int begeleidernummer = int.Parse(selectedBegeleiderstring);
+
+            Begeleider selectedbegeleider = begeleiderService.GetBegeleiderById(begeleidernummer);
+
+            Txt_Begeleidernummer.Text = selectedbegeleider.Begeleidernummer.ToString();
+
+            Txt_Docentnummer.Text = selectedbegeleider.Teachernumber.ToString();
+
+            Txt_Docentnaam.Text = selectedbegeleider.Teachername.ToString();
+
+            Txt_Schoolvak.Text = selectedbegeleider.Subject.ToString();
+
+            Txt_Docentkamernummer.Text = selectedbegeleider.Teacherroomnumber.ToString();
+
+            Txt_Begeleidernummer.Enabled = false;
+            Txt_Docentnummer.Enabled = false;
+            Txt_Docentkamernummer.Enabled = false;
+        }
+
+        //code voor het klikken op de Verwijderen knop voor het verwijderen van een begeleider in het begeleiders panel/venster
+        private void Btn_Begeleiderverwijderen_Click(object sender, EventArgs e)
+        {
+
+            string message = "Weet u zeker dat u deze begeleider wilt verwijderen?";
+            string caption = "Begeleider verwijderen";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.No)
+            {
+                ShowPanel("Begeleiders");
+            }
+            else if (result == DialogResult.Yes)
+            {
+                Begeleider_Service begeleiderService = new Begeleider_Service();
+
+                int BegeleiderNummer = int.Parse(Txt_Begeleidernummer.Text);
+
+                begeleiderService.DeleteBegeleider(BegeleiderNummer);
+            }
+
+            ShowPanel("Begeleiders");
 
         }
     }

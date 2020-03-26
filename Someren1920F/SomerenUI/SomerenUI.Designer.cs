@@ -42,6 +42,7 @@
             this.DrankvoorraadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KassaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OmzetrapportageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BegeleidersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_Dashboard = new System.Windows.Forms.Panel();
             this.lbl_Dashboard = new System.Windows.Forms.Label();
             this.pnl_Students = new System.Windows.Forms.Panel();
@@ -97,9 +98,11 @@
             this.lbl_Omzetrapportage = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnl_Activiteitenlijst = new System.Windows.Forms.Panel();
+            this.lbl_ActivityErrorMessage = new System.Windows.Forms.Label();
             this.lbl_aanvangstijd = new System.Windows.Forms.Label();
             this.AddCalendar = new System.Windows.Forms.MonthCalendar();
             this.label_aanvangstijd = new System.Windows.Forms.Label();
+            this.EditOrDeleteCalendar = new System.Windows.Forms.MonthCalendar();
             this.label_Aantaldocenten = new System.Windows.Forms.Label();
             this.label_Aantalstudenten = new System.Windows.Forms.Label();
             this.lbl_Activiteitomschrijving = new System.Windows.Forms.Label();
@@ -129,8 +132,36 @@
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lbl_Activiteitenlijst = new System.Windows.Forms.Label();
-            this.EditOrDeleteCalendar = new System.Windows.Forms.MonthCalendar();
-            this.lbl_ActivityErrorMessage = new System.Windows.Forms.Label();
+            this.pnl_Begeleiders = new System.Windows.Forms.Panel();
+            this.lbl_Docentnaamtoadd = new System.Windows.Forms.Label();
+            this.Txt_Docentnaamtoadd = new System.Windows.Forms.TextBox();
+            this.Lbl_Docentselecteren = new System.Windows.Forms.Label();
+            this.cmb_Docenten = new System.Windows.Forms.ComboBox();
+            this.Lbl_Begeleidertoevoegen = new System.Windows.Forms.Label();
+            this.Btn_Begeleidertoevoegen = new System.Windows.Forms.Button();
+            this.lbl_Docentkamernummer = new System.Windows.Forms.Label();
+            this.Txt_Docentkamernummer = new System.Windows.Forms.TextBox();
+            this.lbl_Begeleiderverwijderen = new System.Windows.Forms.Label();
+            this.lbl_Schoolvak = new System.Windows.Forms.Label();
+            this.lbl_Docentnaam = new System.Windows.Forms.Label();
+            this.lbl_docentnummer = new System.Windows.Forms.Label();
+            this.lbl_Begeleidernummer = new System.Windows.Forms.Label();
+            this.Btn_Begeleiderverwijderen = new System.Windows.Forms.Button();
+            this.Txt_Docentnummer = new System.Windows.Forms.TextBox();
+            this.Txt_Schoolvak = new System.Windows.Forms.TextBox();
+            this.Txt_Docentnaam = new System.Windows.Forms.TextBox();
+            this.Txt_Begeleidernummer = new System.Windows.Forms.TextBox();
+            this.lbl_Begeleiderselecteren = new System.Windows.Forms.Label();
+            this.cmb_Begeleiders = new System.Windows.Forms.ComboBox();
+            this.lv_Begeleiders = new System.Windows.Forms.ListView();
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_Begeleiders = new System.Windows.Forms.Label();
+            this.lbl_Adddocentnummer = new System.Windows.Forms.Label();
+            this.Txt_Docentnummeradd = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.img_Dashboard)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.pnl_Dashboard.SuspendLayout();
@@ -148,6 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnl_Activiteitenlijst.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.pnl_Begeleiders.SuspendLayout();
             this.SuspendLayout();
             // 
             // img_Dashboard
@@ -169,7 +201,8 @@
             this.ActivitiesToolStripMenuItem,
             this.DrankvoorraadToolStripMenuItem,
             this.KassaToolStripMenuItem,
-            this.OmzetrapportageToolStripMenuItem});
+            this.OmzetrapportageToolStripMenuItem,
+            this.BegeleidersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(962, 24);
@@ -254,6 +287,13 @@
             this.OmzetrapportageToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.OmzetrapportageToolStripMenuItem.Text = "Omzetrapportage";
             this.OmzetrapportageToolStripMenuItem.Click += new System.EventHandler(this.OmzetrapportageToolStripMenuItem_Click);
+            // 
+            // BegeleidersToolStripMenuItem
+            // 
+            this.BegeleidersToolStripMenuItem.Name = "BegeleidersToolStripMenuItem";
+            this.BegeleidersToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.BegeleidersToolStripMenuItem.Text = "Begeleiders";
+            this.BegeleidersToolStripMenuItem.Click += new System.EventHandler(this.BegeleidersToolStripMenuItem_Click);
             // 
             // pnl_Dashboard
             // 
@@ -772,6 +812,17 @@
             this.pnl_Activiteitenlijst.Size = new System.Drawing.Size(940, 472);
             this.pnl_Activiteitenlijst.TabIndex = 10;
             // 
+            // lbl_ActivityErrorMessage
+            // 
+            this.lbl_ActivityErrorMessage.AutoSize = true;
+            this.lbl_ActivityErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ActivityErrorMessage.Location = new System.Drawing.Point(3, 439);
+            this.lbl_ActivityErrorMessage.Name = "lbl_ActivityErrorMessage";
+            this.lbl_ActivityErrorMessage.Size = new System.Drawing.Size(754, 20);
+            this.lbl_ActivityErrorMessage.TabIndex = 44;
+            this.lbl_ActivityErrorMessage.Text = "Voor het toevoegen of wijzigen van een activiteit moeten alle bijbehorende velden" +
+    " correct worden ingevuld!";
+            // 
             // lbl_aanvangstijd
             // 
             this.lbl_aanvangstijd.AutoSize = true;
@@ -795,6 +846,12 @@
             this.label_aanvangstijd.Size = new System.Drawing.Size(68, 13);
             this.label_aanvangstijd.TabIndex = 41;
             this.label_aanvangstijd.Text = "Aanvangstijd";
+            // 
+            // EditOrDeleteCalendar
+            // 
+            this.EditOrDeleteCalendar.Location = new System.Drawing.Point(402, 233);
+            this.EditOrDeleteCalendar.Name = "EditOrDeleteCalendar";
+            this.EditOrDeleteCalendar.TabIndex = 40;
             // 
             // label_Aantaldocenten
             // 
@@ -978,7 +1035,7 @@
             this.Txtaddomschrijving.Location = new System.Drawing.Point(647, 236);
             this.Txtaddomschrijving.Multiline = true;
             this.Txtaddomschrijving.Name = "Txtaddomschrijving";
-            this.Txtaddomschrijving.Size = new System.Drawing.Size(285, 38);
+            this.Txtaddomschrijving.Size = new System.Drawing.Size(282, 38);
             this.Txtaddomschrijving.TabIndex = 19;
             // 
             // lv_Activiteitenlijst
@@ -1042,28 +1099,287 @@
             this.lbl_Activiteitenlijst.TabIndex = 12;
             this.lbl_Activiteitenlijst.Text = "Activiteitenlijst";
             // 
-            // EditOrDeleteCalendar
+            // pnl_Begeleiders
             // 
-            this.EditOrDeleteCalendar.Location = new System.Drawing.Point(402, 233);
-            this.EditOrDeleteCalendar.Name = "EditOrDeleteCalendar";
-            this.EditOrDeleteCalendar.TabIndex = 40;
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Adddocentnummer);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Docentnummeradd);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Docentnaamtoadd);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Docentnaamtoadd);
+            this.pnl_Begeleiders.Controls.Add(this.Lbl_Docentselecteren);
+            this.pnl_Begeleiders.Controls.Add(this.cmb_Docenten);
+            this.pnl_Begeleiders.Controls.Add(this.Lbl_Begeleidertoevoegen);
+            this.pnl_Begeleiders.Controls.Add(this.Btn_Begeleidertoevoegen);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Docentkamernummer);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Docentkamernummer);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Begeleiderverwijderen);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Schoolvak);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Docentnaam);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_docentnummer);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Begeleidernummer);
+            this.pnl_Begeleiders.Controls.Add(this.Btn_Begeleiderverwijderen);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Docentnummer);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Schoolvak);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Docentnaam);
+            this.pnl_Begeleiders.Controls.Add(this.Txt_Begeleidernummer);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Begeleiderselecteren);
+            this.pnl_Begeleiders.Controls.Add(this.cmb_Begeleiders);
+            this.pnl_Begeleiders.Controls.Add(this.lv_Begeleiders);
+            this.pnl_Begeleiders.Controls.Add(this.lbl_Begeleiders);
+            this.pnl_Begeleiders.Location = new System.Drawing.Point(10, 21);
+            this.pnl_Begeleiders.Name = "pnl_Begeleiders";
+            this.pnl_Begeleiders.Size = new System.Drawing.Size(940, 472);
+            this.pnl_Begeleiders.TabIndex = 11;
             // 
-            // lbl_ActivityErrorMessage
+            // lbl_Docentnaamtoadd
             // 
-            this.lbl_ActivityErrorMessage.AutoSize = true;
-            this.lbl_ActivityErrorMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ActivityErrorMessage.Location = new System.Drawing.Point(3, 439);
-            this.lbl_ActivityErrorMessage.Name = "lbl_ActivityErrorMessage";
-            this.lbl_ActivityErrorMessage.Size = new System.Drawing.Size(754, 20);
-            this.lbl_ActivityErrorMessage.TabIndex = 44;
-            this.lbl_ActivityErrorMessage.Text = "Voor het toevoegen of wijzigen van een activiteit moeten alle bijbehorende velden" +
-    " correct worden ingevuld!";
+            this.lbl_Docentnaamtoadd.AutoSize = true;
+            this.lbl_Docentnaamtoadd.Location = new System.Drawing.Point(165, 275);
+            this.lbl_Docentnaamtoadd.Name = "lbl_Docentnaamtoadd";
+            this.lbl_Docentnaamtoadd.Size = new System.Drawing.Size(68, 13);
+            this.lbl_Docentnaamtoadd.TabIndex = 66;
+            this.lbl_Docentnaamtoadd.Text = "Docentnaam";
+            // 
+            // Txt_Docentnaamtoadd
+            // 
+            this.Txt_Docentnaamtoadd.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Txt_Docentnaamtoadd.Location = new System.Drawing.Point(162, 291);
+            this.Txt_Docentnaamtoadd.Name = "Txt_Docentnaamtoadd";
+            this.Txt_Docentnaamtoadd.Size = new System.Drawing.Size(116, 20);
+            this.Txt_Docentnaamtoadd.TabIndex = 65;
+            // 
+            // Lbl_Docentselecteren
+            // 
+            this.Lbl_Docentselecteren.AutoSize = true;
+            this.Lbl_Docentselecteren.Location = new System.Drawing.Point(120, 223);
+            this.Lbl_Docentselecteren.Name = "Lbl_Docentselecteren";
+            this.Lbl_Docentselecteren.Size = new System.Drawing.Size(94, 13);
+            this.Lbl_Docentselecteren.TabIndex = 64;
+            this.Lbl_Docentselecteren.Text = "Docent selecteren";
+            // 
+            // cmb_Docenten
+            // 
+            this.cmb_Docenten.FormattingEnabled = true;
+            this.cmb_Docenten.Location = new System.Drawing.Point(117, 242);
+            this.cmb_Docenten.Name = "cmb_Docenten";
+            this.cmb_Docenten.Size = new System.Drawing.Size(116, 21);
+            this.cmb_Docenten.TabIndex = 63;
+            this.cmb_Docenten.SelectedIndexChanged += new System.EventHandler(this.Cmb_Docenten_SelectedIndexChanged);
+            // 
+            // Lbl_Begeleidertoevoegen
+            // 
+            this.Lbl_Begeleidertoevoegen.AutoSize = true;
+            this.Lbl_Begeleidertoevoegen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Begeleidertoevoegen.Location = new System.Drawing.Point(84, 193);
+            this.Lbl_Begeleidertoevoegen.Name = "Lbl_Begeleidertoevoegen";
+            this.Lbl_Begeleidertoevoegen.Size = new System.Drawing.Size(197, 24);
+            this.Lbl_Begeleidertoevoegen.TabIndex = 62;
+            this.Lbl_Begeleidertoevoegen.Text = "Begeleider toevoegen";
+            // 
+            // Btn_Begeleidertoevoegen
+            // 
+            this.Btn_Begeleidertoevoegen.Location = new System.Drawing.Point(129, 319);
+            this.Btn_Begeleidertoevoegen.Name = "Btn_Begeleidertoevoegen";
+            this.Btn_Begeleidertoevoegen.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Begeleidertoevoegen.TabIndex = 57;
+            this.Btn_Begeleidertoevoegen.Text = "Toevoegen";
+            this.Btn_Begeleidertoevoegen.UseVisualStyleBackColor = true;
+            this.Btn_Begeleidertoevoegen.Click += new System.EventHandler(this.Btn_Begeleidertoevoegen_Click);
+            // 
+            // lbl_Docentkamernummer
+            // 
+            this.lbl_Docentkamernummer.AutoSize = true;
+            this.lbl_Docentkamernummer.Location = new System.Drawing.Point(375, 417);
+            this.lbl_Docentkamernummer.Name = "lbl_Docentkamernummer";
+            this.lbl_Docentkamernummer.Size = new System.Drawing.Size(108, 13);
+            this.lbl_Docentkamernummer.TabIndex = 54;
+            this.lbl_Docentkamernummer.Text = "Docentkamernummer";
+            // 
+            // Txt_Docentkamernummer
+            // 
+            this.Txt_Docentkamernummer.Location = new System.Drawing.Point(372, 435);
+            this.Txt_Docentkamernummer.Name = "Txt_Docentkamernummer";
+            this.Txt_Docentkamernummer.Size = new System.Drawing.Size(116, 20);
+            this.Txt_Docentkamernummer.TabIndex = 53;
+            // 
+            // lbl_Begeleiderverwijderen
+            // 
+            this.lbl_Begeleiderverwijderen.AutoSize = true;
+            this.lbl_Begeleiderverwijderen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Begeleiderverwijderen.Location = new System.Drawing.Point(368, 193);
+            this.lbl_Begeleiderverwijderen.Name = "lbl_Begeleiderverwijderen";
+            this.lbl_Begeleiderverwijderen.Size = new System.Drawing.Size(205, 24);
+            this.lbl_Begeleiderverwijderen.TabIndex = 52;
+            this.lbl_Begeleiderverwijderen.Text = "Begeleider verwijderen";
+            // 
+            // lbl_Schoolvak
+            // 
+            this.lbl_Schoolvak.AutoSize = true;
+            this.lbl_Schoolvak.Location = new System.Drawing.Point(375, 372);
+            this.lbl_Schoolvak.Name = "lbl_Schoolvak";
+            this.lbl_Schoolvak.Size = new System.Drawing.Size(58, 13);
+            this.lbl_Schoolvak.TabIndex = 51;
+            this.lbl_Schoolvak.Text = "Schoolvak";
+            // 
+            // lbl_Docentnaam
+            // 
+            this.lbl_Docentnaam.AutoSize = true;
+            this.lbl_Docentnaam.Location = new System.Drawing.Point(375, 329);
+            this.lbl_Docentnaam.Name = "lbl_Docentnaam";
+            this.lbl_Docentnaam.Size = new System.Drawing.Size(68, 13);
+            this.lbl_Docentnaam.TabIndex = 50;
+            this.lbl_Docentnaam.Text = "Docentnaam";
+            // 
+            // lbl_docentnummer
+            // 
+            this.lbl_docentnummer.AutoSize = true;
+            this.lbl_docentnummer.Location = new System.Drawing.Point(475, 275);
+            this.lbl_docentnummer.Name = "lbl_docentnummer";
+            this.lbl_docentnummer.Size = new System.Drawing.Size(79, 13);
+            this.lbl_docentnummer.TabIndex = 49;
+            this.lbl_docentnummer.Text = "Docentnummer";
+            // 
+            // lbl_Begeleidernummer
+            // 
+            this.lbl_Begeleidernummer.AutoSize = true;
+            this.lbl_Begeleidernummer.Location = new System.Drawing.Point(375, 275);
+            this.lbl_Begeleidernummer.Name = "lbl_Begeleidernummer";
+            this.lbl_Begeleidernummer.Size = new System.Drawing.Size(94, 13);
+            this.lbl_Begeleidernummer.TabIndex = 48;
+            this.lbl_Begeleidernummer.Text = "Begeleidernummer";
+            // 
+            // Btn_Begeleiderverwijderen
+            // 
+            this.Btn_Begeleiderverwijderen.Location = new System.Drawing.Point(524, 423);
+            this.Btn_Begeleiderverwijderen.Name = "Btn_Begeleiderverwijderen";
+            this.Btn_Begeleiderverwijderen.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Begeleiderverwijderen.TabIndex = 47;
+            this.Btn_Begeleiderverwijderen.Text = "Verwijderen";
+            this.Btn_Begeleiderverwijderen.UseVisualStyleBackColor = true;
+            this.Btn_Begeleiderverwijderen.Click += new System.EventHandler(this.Btn_Begeleiderverwijderen_Click);
+            // 
+            // Txt_Docentnummer
+            // 
+            this.Txt_Docentnummer.Location = new System.Drawing.Point(484, 297);
+            this.Txt_Docentnummer.Multiline = true;
+            this.Txt_Docentnummer.Name = "Txt_Docentnummer";
+            this.Txt_Docentnummer.Size = new System.Drawing.Size(49, 21);
+            this.Txt_Docentnummer.TabIndex = 45;
+            // 
+            // Txt_Schoolvak
+            // 
+            this.Txt_Schoolvak.Location = new System.Drawing.Point(372, 390);
+            this.Txt_Schoolvak.Name = "Txt_Schoolvak";
+            this.Txt_Schoolvak.Size = new System.Drawing.Size(116, 20);
+            this.Txt_Schoolvak.TabIndex = 44;
+            // 
+            // Txt_Docentnaam
+            // 
+            this.Txt_Docentnaam.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Txt_Docentnaam.Location = new System.Drawing.Point(372, 345);
+            this.Txt_Docentnaam.Name = "Txt_Docentnaam";
+            this.Txt_Docentnaam.Size = new System.Drawing.Size(116, 20);
+            this.Txt_Docentnaam.TabIndex = 43;
+            // 
+            // Txt_Begeleidernummer
+            // 
+            this.Txt_Begeleidernummer.Location = new System.Drawing.Point(373, 295);
+            this.Txt_Begeleidernummer.Multiline = true;
+            this.Txt_Begeleidernummer.Name = "Txt_Begeleidernummer";
+            this.Txt_Begeleidernummer.Size = new System.Drawing.Size(47, 21);
+            this.Txt_Begeleidernummer.TabIndex = 42;
+            // 
+            // lbl_Begeleiderselecteren
+            // 
+            this.lbl_Begeleiderselecteren.AutoSize = true;
+            this.lbl_Begeleiderselecteren.Location = new System.Drawing.Point(374, 223);
+            this.lbl_Begeleiderselecteren.Name = "lbl_Begeleiderselecteren";
+            this.lbl_Begeleiderselecteren.Size = new System.Drawing.Size(109, 13);
+            this.lbl_Begeleiderselecteren.TabIndex = 41;
+            this.lbl_Begeleiderselecteren.Text = "Begeleider selecteren";
+            // 
+            // cmb_Begeleiders
+            // 
+            this.cmb_Begeleiders.FormattingEnabled = true;
+            this.cmb_Begeleiders.Location = new System.Drawing.Point(372, 242);
+            this.cmb_Begeleiders.Name = "cmb_Begeleiders";
+            this.cmb_Begeleiders.Size = new System.Drawing.Size(116, 21);
+            this.cmb_Begeleiders.TabIndex = 40;
+            this.cmb_Begeleiders.SelectedIndexChanged += new System.EventHandler(this.Cmb_Begeleiders_SelectedIndexChanged);
+            // 
+            // lv_Begeleiders
+            // 
+            this.lv_Begeleiders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21});
+            this.lv_Begeleiders.HideSelection = false;
+            this.lv_Begeleiders.Location = new System.Drawing.Point(23, 49);
+            this.lv_Begeleiders.Name = "lv_Begeleiders";
+            this.lv_Begeleiders.Size = new System.Drawing.Size(708, 135);
+            this.lv_Begeleiders.TabIndex = 19;
+            this.lv_Begeleiders.UseCompatibleStateImageBehavior = false;
+            this.lv_Begeleiders.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Begeleidernummer";
+            this.columnHeader17.Width = 100;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Docentnummer";
+            this.columnHeader18.Width = 100;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Docentnaam";
+            this.columnHeader19.Width = 150;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Schoolvak";
+            this.columnHeader20.Width = 200;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Docentkamernummer";
+            this.columnHeader21.Width = 154;
+            // 
+            // lbl_Begeleiders
+            // 
+            this.lbl_Begeleiders.AutoSize = true;
+            this.lbl_Begeleiders.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Begeleiders.Location = new System.Drawing.Point(18, 12);
+            this.lbl_Begeleiders.Name = "lbl_Begeleiders";
+            this.lbl_Begeleiders.Size = new System.Drawing.Size(145, 29);
+            this.lbl_Begeleiders.TabIndex = 13;
+            this.lbl_Begeleiders.Text = "Begeleiders";
+            // 
+            // lbl_Adddocentnummer
+            // 
+            this.lbl_Adddocentnummer.AutoSize = true;
+            this.lbl_Adddocentnummer.Location = new System.Drawing.Point(82, 274);
+            this.lbl_Adddocentnummer.Name = "lbl_Adddocentnummer";
+            this.lbl_Adddocentnummer.Size = new System.Drawing.Size(79, 13);
+            this.lbl_Adddocentnummer.TabIndex = 68;
+            this.lbl_Adddocentnummer.Text = "Docentnummer";
+            // 
+            // Txt_Docentnummeradd
+            // 
+            this.Txt_Docentnummeradd.Location = new System.Drawing.Point(91, 291);
+            this.Txt_Docentnummeradd.Multiline = true;
+            this.Txt_Docentnummeradd.Name = "Txt_Docentnummeradd";
+            this.Txt_Docentnummeradd.Size = new System.Drawing.Size(49, 21);
+            this.Txt_Docentnummeradd.TabIndex = 67;
             // 
             // SomerenUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 505);
+            this.Controls.Add(this.pnl_Begeleiders);
             this.Controls.Add(this.pnl_Activiteitenlijst);
             this.Controls.Add(this.pnl_Omzetrapportage);
             this.Controls.Add(this.pnl_Kassa);
@@ -1105,6 +1421,8 @@
             this.pnl_Activiteitenlijst.ResumeLayout(false);
             this.pnl_Activiteitenlijst.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.pnl_Begeleiders.ResumeLayout(false);
+            this.pnl_Begeleiders.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1214,6 +1532,37 @@
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.MonthCalendar EditOrDeleteCalendar;
         private System.Windows.Forms.Label lbl_ActivityErrorMessage;
+        private System.Windows.Forms.ToolStripMenuItem BegeleidersToolStripMenuItem;
+        private System.Windows.Forms.Panel pnl_Begeleiders;
+        private System.Windows.Forms.Label lbl_Begeleiders;
+        private System.Windows.Forms.ListView lv_Begeleiders;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.Label Lbl_Docentselecteren;
+        private System.Windows.Forms.ComboBox cmb_Docenten;
+        private System.Windows.Forms.Label Lbl_Begeleidertoevoegen;
+        private System.Windows.Forms.Button Btn_Begeleidertoevoegen;
+        private System.Windows.Forms.Label lbl_Docentkamernummer;
+        private System.Windows.Forms.TextBox Txt_Docentkamernummer;
+        private System.Windows.Forms.Label lbl_Begeleiderverwijderen;
+        private System.Windows.Forms.Label lbl_Schoolvak;
+        private System.Windows.Forms.Label lbl_Docentnaam;
+        private System.Windows.Forms.Label lbl_docentnummer;
+        private System.Windows.Forms.Label lbl_Begeleidernummer;
+        private System.Windows.Forms.Button Btn_Begeleiderverwijderen;
+        private System.Windows.Forms.TextBox Txt_Docentnummer;
+        private System.Windows.Forms.TextBox Txt_Schoolvak;
+        private System.Windows.Forms.TextBox Txt_Docentnaam;
+        private System.Windows.Forms.TextBox Txt_Begeleidernummer;
+        private System.Windows.Forms.Label lbl_Begeleiderselecteren;
+        private System.Windows.Forms.ComboBox cmb_Begeleiders;
+        private System.Windows.Forms.Label lbl_Docentnaamtoadd;
+        private System.Windows.Forms.TextBox Txt_Docentnaamtoadd;
+        private System.Windows.Forms.Label lbl_Adddocentnummer;
+        private System.Windows.Forms.TextBox Txt_Docentnummeradd;
     }
 }
 

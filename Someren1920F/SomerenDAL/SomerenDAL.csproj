@@ -45,6 +45,7 @@
     <Compile Include="Base.cs" />
     <Compile Include="Bestelling_DAO.cs" />
     <Compile Include="Activity_DAO.cs" />
+    <Compile Include="Begeleider_DAO.cs" />
     <Compile Include="Voorraad_DAO.cs" />
     <Compile Include="Drank_DAO.cs" />
     <Compile Include="Room_DAO.cs" />
